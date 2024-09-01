@@ -4,6 +4,8 @@ fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
+export HOMEBREW_BUNDLE_FILE="${HOME}/.config/homebrew/Brewfile"
+
 # Catppuccin Mocha colorscheme for fzf
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
