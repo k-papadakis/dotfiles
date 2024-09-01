@@ -5,11 +5,11 @@ cd home
 
 # Some programs store their config in ~/Library/Application\ Support
 MACOS_CONFIG_DIR="${HOME}/Library/Application Support"
-declare -A MAC_CONFIGS
 
 # Add ~/Library/Application\ Support programs here.
 # Note that this associative array is used as a hashet,
 # meaning that its values don't matter.
+declare -A MAC_CONFIGS
 MAC_CONFIGS=(["lazygit"]=0)
 
 for p in $(find . -mindepth 1 -maxdepth 2 -not -path ./.config | sed 's|^\./||'); do
@@ -44,6 +44,5 @@ for p in $(find . -mindepth 1 -maxdepth 2 -not -path ./.config | sed 's|^\./||')
 
     echo "Linking $source_path -> $target_path"
     ln -s "$source_path" "$target_path"
-    echo
   fi
 done
