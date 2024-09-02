@@ -61,6 +61,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 - [Podman](https://podman.io/docs/installation)
 
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
+
 ### Next steps
 
 Create autocompletions for each program, according to each programs instructions.
