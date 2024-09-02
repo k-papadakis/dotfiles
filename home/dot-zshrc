@@ -4,6 +4,7 @@ fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
+export XDG_CONFIG_HOME="${HOME}/.config"
 export HOMEBREW_BUNDLE_FILE="${HOME}/.config/homebrew/Brewfile"
 
 # Catppuccin Mocha colorscheme for fzf
@@ -155,5 +156,5 @@ alias up="brew update && brew upgrade"
 alias cd="z"
 alias ls="eza --color=auto --icons=auto"
 alias tree="eza --tree --color=auto --icons=auto"
-alias ll="eza --long --color=auto --icons=auto"
-alias la="eza --long --all --color=auto --icons=auto"
+alias ll="eza --long --color=auto --icons=auto --git"
+alias la="eza --long --all --color=auto --icons=auto --git"
