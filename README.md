@@ -2,7 +2,7 @@
 
 Configuration files.
 
-### Homebrew
+## Homebrew
 
 Install [homebrew](https://brew.sh/)
 
@@ -16,6 +16,10 @@ as well as other useful programs, can be installed by running
 ```bash
 brew bundle install
 ```
+
+## iTerm2
+
+Open iTerm2, import [iterm2/myprofile.json](/iterm2/myprofile.json), and select it as
 
 ## Symlinking
 

@@ -1,1 +1,2 @@
-home/dot-config/lazygit/state.yml
+home/dot-config/lazygit/*
+!home/dot-config/lazygit/config.yml
