@@ -1,3 +1,4 @@
+-- TODO: Create a toggle for copilot
 return {
   "hrsh7th/nvim-cmp",
   opts = function()
