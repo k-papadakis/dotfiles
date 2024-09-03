@@ -10,35 +10,13 @@ Install [homebrew](https://brew.sh/)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Most of the programs that are used or referenced by the configuration files,
-as well as other useful programs, can be installed by running
-
-```bash
-brew bundle install
-```
-
-## iTerm2
-
-Open iTerm2, import [iterm2/myprofile.json](/iterm2/myprofile.json), and select it as
-
-## Symlinking
-
-Manually back up and remove already existing configuration files,
-and then create symbolic links with [stow](https://www.gnu.org/software/stow/).
-
-```bash
-stow --verbose --restow --target=$HOME --dotfiles home
-```
-
-## Programs installation
-
-### [ohmyzsh](https://ohmyz.sh/#install)
+## [OhMyZsh](https://ohmyz.sh/#install)
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### ohmyzsh plugins
+## OhMyZsh plugins
 
 Zsh Syntax Highlighting
 
@@ -52,9 +30,42 @@ Zsh Autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-### Additional installations
+## Symlinking
+
+Install [stow](https://www.gnu.org/software/stow/) with
+
+```bash
+brew install stow
+```
+
+Create symbolic links with `stow`.
+
+```bash
+stow --verbose --restow --target=$HOME --dotfiles home
+```
+
+If you get any errors about already existing files,
+manually back them up and remove them.
+
+## Homebrew Bundle
+
+Most of the programs that are used or referenced by the configuration files,
+as well as other useful programs, can be installed by running
+
+```bash
+brew bundle install
+```
+
+## iTerm2
+
+- Open [iterm2/myprofile.json](/iterm2/myprofile.json) and edit the `Working Directory` field to your home directory.
+- Open iTerm2, import [iterm2/myprofile.json](/iterm2/myprofile.json),
+  and select it as the default.
+
+## Additional installations
 
 - [GitHub Copilot CLI](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line)
+
 - [Rust](https://www.rust-lang.org/tools/install)
 
 - [Haskell](https://www.haskell.org/ghcup/)
