@@ -1,2 +1,3 @@
 home/dot-config/lazygit/*
 !home/dot-config/lazygit/config.yml
+.DS_Store
