@@ -137,9 +137,9 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # GitHub Copilot CLI aliasing
 eval "$(gh copilot alias -- zsh)"
 
+eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
-
 source <(fzf --zsh)
 
 alias docker="podman"
