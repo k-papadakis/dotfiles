@@ -9,3 +9,12 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     vim.bo.filetype = "yaml.gitlab"
   end,
 })
+
+-- *.tftpl files as hcl files.
+-- It is not great, but it is better than nothing.
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.tftpl",
+  callback = function()
+    vim.bo.filetype = "hcl"
+  end,
+})
