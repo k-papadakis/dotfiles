@@ -3,8 +3,17 @@ return {
   cmd = "Copilot",
   build = ":Copilot auth",
   event = "InsertEnter",
-  panel = { enabled = false },
+  keys = {
+    {
+      "<leader>at",
+      function()
+        require("copilot.suggestion").toggle_auto_trigger()
+      end,
+      desc = "Toggle Auto Trigger (Buffer) (Copilot)",
+    },
+  },
   opts = {
+    panel = { enabled = false },
     filetypes = {
       markdown = true,
       help = true,
