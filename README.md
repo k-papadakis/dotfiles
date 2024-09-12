@@ -58,7 +58,8 @@ brew bundle install
 
 ## iTerm2
 
-- Open [iterm2/myprofile.json](/iterm2/myprofile.json) and edit the `Working Directory` field to your home directory.
+- Open [iterm2/myprofile.json](/iterm2/myprofile.json) and
+  edit the `Working Directory` field to your home directory.
 - Open iTerm2, import [iterm2/myprofile.json](/iterm2/myprofile.json),
   and select it as the default.
 
