@@ -77,4 +77,24 @@ brew bundle install
 
 ### Next steps
 
+#### Autocompletions
+
 Create autocompletions for each program, according to each programs instructions.
+
+#### PAM
+
+Enable touch id authentication for `sudo`, including from within tmux,
+by running
+
+```bash
+sudo echo \
+"auth       optional       $(brew --prefix)/lib/pam/pam_reattach.so       ignore_ssh
+auth       sufficient     pam_tid.so" > /etc/pam.d/sudo_local
+```
+
+#### Karabiner
+
+To give the required privileges to Karabiner,
+follow the
+[post installation instructions](https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-complex-modifications/)
+.

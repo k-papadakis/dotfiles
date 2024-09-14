@@ -1,3 +1,7 @@
 home/dot-config/lazygit/*
 !home/dot-config/lazygit/config.yml
+
+home/dot-config/karabiner/*
+!home/dot-config/karabiner/karabiner.json
+
 .DS_Store
