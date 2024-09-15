@@ -36,7 +36,7 @@ function set_fzf_theme {
     --color=selected-bg:#45475a \
     --multi"
 
-    export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS} ${FZF_THEMES[$theme]}"
+    export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS} ${FZF_THEMES["$theme"]}"
 }
 
 set_fzf_theme "catppuccin_frappe"
