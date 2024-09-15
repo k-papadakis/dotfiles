@@ -1,13 +1,9 @@
 return {
-  -- change theme
-  {
-    "catppuccin/nvim",
-    opts = { flavour = "mocha" },
-  },
+  { "Mofiqul/vscode.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "catppuccin-frappe",
     },
   },
 }
