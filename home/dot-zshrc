@@ -144,6 +144,9 @@ export EDITOR="$VISUAL"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Terraform completions
+complete -o nospace -C terraform terraform
+
 # Azure CLI autocompletions
 source $(brew --prefix)/etc/bash_completion.d/az
 
@@ -182,4 +185,3 @@ alias ll="eza --long --color=auto --icons=auto --git"
 alias la="eza --long --all --color=auto --icons=auto --git"
 alias lzg="lazygit"
 alias lzd="lazydocker"
-
