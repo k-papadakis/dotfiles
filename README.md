@@ -49,11 +49,7 @@ brew bundle install
 
 - [Rust](https://www.rust-lang.org/tools/install)
 
-- [Haskell](https://www.haskell.org/ghcup/)
-
 - [Podman](https://podman.io/docs/installation)
-
-- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
 
 ### Next steps
 
