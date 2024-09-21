@@ -5,10 +5,6 @@ export STARSHIP_CONFIG="${HOME}/.config/starship/starship.toml"
 PATH="${PATH}:${HOME}/.local/bin"
 # Use bat for man pages
 export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain'"
-# Java Setup
-export JAVA_HOME="${HOMEBREW_PREFIX}/opt/openjdk@11"
-PATH="${JAVA_HOME}/bin:${PATH}"
-export CPPFLAGS="-I${JAVA_HOME}/include"
 # Prevent Podman from using the OCI format
 export BUILDAH_FORMAT=docker
 # Default Editor
