@@ -18,5 +18,12 @@ return {
       markdown = true,
       help = true,
     },
+    suggestion = {
+      keymap = {
+        accept_word = "<M-w>",
+        accept_line = "<M-l>",
+        accept = "<M-y>",
+      },
+    },
   },
 }
