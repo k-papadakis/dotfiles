@@ -1,5 +1,10 @@
 palette = "catppuccin_frappe"
 
+[scala]
+# Removing .metals because
+# because Metals creates such a directory in $HOME
+detect_folders = []
+
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
 flamingo = "#eebebe"
