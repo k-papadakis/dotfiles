@@ -26,6 +26,11 @@ zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
 # AUTOCOMPLETIONS
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose yes
+
 fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
