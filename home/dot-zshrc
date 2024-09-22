@@ -26,6 +26,7 @@ zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
 # AUTOCOMPLETIONS
+unsetopt LIST_BEEP
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' group-name ''
