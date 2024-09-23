@@ -4,4 +4,6 @@ home/dot-config/lazygit/*
 home/dot-config/karabiner/*
 !home/dot-config/karabiner/karabiner.json
 
+home/dot-config/wezterm/images
+
 .DS_Store

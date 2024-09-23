@@ -39,7 +39,7 @@ autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
 complete -o nospace -C terraform terraform
-source ${HOMEBREW_PREFIX}/etc/bash_completion.d/az
+source "${HOMEBREW_PREFIX}/etc/bash_completion.d/az"
 
 # PROGRAMS SETUP
 eval "$(starship init zsh)"
@@ -47,11 +47,11 @@ eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
-source "${HOME}/.zsh/fzf/themes/catppuccin-frappe.zsh"
+source "${HOME}/.zsh/fzf/themes/catppuccin-frappe-transparent.zsh"
 source <(fzf --zsh)
 source "${HOME}/.zsh/zsh-syntax-highlighting/themes/catppuccin-frappe.zsh"
-source ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # ALIASES
 alias docker="podman"
@@ -63,3 +63,12 @@ alias la="eza --long --all --color=auto --icons=auto --git"
 alias lzg="lazygit"
 alias lzd="lazydocker"
 alias batman="bat --language=man --style=plain --paging=always"
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
+# SHELL INTEGRATION
+# Disabling this because neovim's terminal from within tmux prints OSC escape sequences.
+# See https://github.com/wez/wezterm/issues/5007
+# source "${HOME}/.zsh/wezterm/shell_integration.sh"
