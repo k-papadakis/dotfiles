@@ -28,7 +28,7 @@ bindkey "^X^E" edit-command-line
 
 # AUTOCOMPLETIONS
 unsetopt LIST_BEEP
-setopt CORRECT
+setopt CORRECT_ALL
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' use-cache on
