@@ -29,6 +29,7 @@ bindkey "^X^E" edit-command-line
 unsetopt LIST_BEEP
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' use-cache on
 
 fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
 fpath+=~/.zfunc
