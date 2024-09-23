@@ -27,6 +27,7 @@ bindkey "^X^E" edit-command-line
 
 # AUTOCOMPLETIONS
 unsetopt LIST_BEEP
+setopt CORRECT
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' use-cache on
@@ -44,7 +45,6 @@ eval "$(starship init zsh)"
 eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
-eval $(thefuck --alias)
 
 source "${HOME}/.zsh/fzf/themes/catppuccin-frappe.zsh"
 source <(fzf --zsh)
