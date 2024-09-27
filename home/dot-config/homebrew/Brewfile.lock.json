@@ -8,7 +8,7 @@
         "revision": "2818633fdb69877d921636d7add3cee843c5bb70"
       },
       "homebrew/bundle": {
-        "revision": "a882a221ecb33f855f8a0b78adaa525926901a19"
+        "revision": "5fe8e86642f7a5c1094c59d705de8dc3fcdeafac"
       },
       "kovetskiy/mark": {
         "revision": "e3b53599ed8ac7f7f220c1a4b1205ce636feffc1"
@@ -2332,6 +2332,12 @@
         "version": "20240203-110809,5046fc22",
         "options": {
           "full_name": "wezterm"
+        }
+      },
+      "alacritty": {
+        "version": "0.13.2",
+        "options": {
+          "full_name": "alacritty"
         }
       }
     }
