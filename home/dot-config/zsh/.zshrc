@@ -28,7 +28,7 @@ eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
-source "${ZDOTDIR}/fzf/themes/base16-default-dark.zsh"
+# source "${ZDOTDIR}/fzf/themes/base16-default-dark.zsh"
 source <(fzf --zsh)
 source "${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # source "${ZDOTDIR}/zsh-syntax-highlighting/themes/catppuccin-frappe.zsh" # TODO: base16

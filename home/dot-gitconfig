@@ -13,7 +13,8 @@
   diffFilter = delta --color-only
 [delta]
   # features = catppuccin-frappe
-  syntax-theme = base16
+  # syntax-theme = base16
+  syntax-theme = "Visual Studio Dark+"
   navigate = true
 [merge]
   conflictstyle = diff3

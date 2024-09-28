@@ -1,6 +1,7 @@
 return {
   {
     "echasnovski/mini.base16",
+    enabled = false,
     opts = {
       palette = {
         base00 = "#181818",
@@ -22,20 +23,25 @@ return {
       },
     },
   },
-  -- {
-  --   "catppuccin/nvim",
-  --   opts = {
-  --     transparent_background = false,
-  --     background = {
-  --       light = "latte",
-  --       dark = "frappe",
-  --     },
-  --   },
-  -- },
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     colorscheme = "catppuccin",
-  --   },
-  -- },
+  {
+    "catppuccin/nvim",
+    opts = {
+      transparent_background = false,
+      background = {
+        light = "latte",
+        dark = "frappe",
+      },
+    },
+  },
+  {
+    "LunarVim/darkplus.nvim",
+    name = "darkplus",
+    opts = {},
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "darkplus",
+    },
+  },
 }
