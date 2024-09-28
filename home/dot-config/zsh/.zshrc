@@ -1,23 +1,3 @@
-# ENVIRONMENT VARIABLES
-export XDG_CONFIG_HOME="${HOME}/.config"
-export HOMEBREW_BUNDLE_FILE="${HOME}/.config/homebrew/Brewfile"
-export STARSHIP_CONFIG="${HOME}/.config/starship/starship.toml"
-PATH="${PATH}:${HOME}/.local/bin"
-# Use bat for man pages
-export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain'"
-# Prevent Podman from using the OCI format
-export BUILDAH_FORMAT=docker
-# Default Editor
-if [[ -n ${SSH_CONNECTION} ]]; then
-  export VISUAL=vim
-else
-  export VISUAL=nvim
-fi
-export EDITOR="${VISUAL}"
-export PATH
-export LESS="-i"
-export TINTED_TMUX_OPTION_STATUSBAR=1
-
 # KEYBINDINGS
 # Because, $EDITOR contains "vi", zsh automatically sets `bindkey -v`
 # Revert it back to emacs keybindings.
@@ -35,7 +15,7 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' use-cache on
 
 fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
-fpath+=~/.zfunc
+fpath+=${ZDOTDIR}/.zfunc
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
@@ -48,10 +28,10 @@ eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
-source "${HOME}/.zsh/fzf/themes/base16-default-dark.zsh"
+source "${ZDOTDIR}/fzf/themes/base16-default-dark.zsh"
 source <(fzf --zsh)
 source "${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-# source "${HOME}/.zsh/zsh-syntax-highlighting/themes/catppuccin-frappe.zsh" # TODO: base16
+# source "${ZDOTDIR}/zsh-syntax-highlighting/themes/catppuccin-frappe.zsh" # TODO: base16
 source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # ALIASES
