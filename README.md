@@ -36,14 +36,6 @@ well as other useful programs, can be installed by running
 brew bundle install
 ```
 
-## Tmux Plugin Manager (TPM)
-
-Install TPM with
-
-```bash
-git clone https://github.com/tmux-plugins/tpm $XDG_DATA_HOME/tmux/plugins/tpm/tpm
-```
-
 ## iTerm2
 
 - Open [iterm2/myprofile.json](/iterm2/myprofile.json) and edit the
