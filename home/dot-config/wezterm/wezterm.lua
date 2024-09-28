@@ -2,9 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
--- config.color_scheme = "Catppuccin Frappe"
--- config.color_scheme = "Default Dark (base16)"
-config.color_scheme = "Vs Code Dark+ (Gogh)"
+config.color_scheme = "Catppuccin Mocha"
 config.font_size = 13
 config.line_height = 1.2
 config.send_composed_key_when_right_alt_is_pressed = false

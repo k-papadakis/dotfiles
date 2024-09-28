@@ -1,6 +1,4 @@
-# import = ["~/.config/alacritty/alacritty-theme/themes/catppuccin_frappe.toml"]
-# import = ["~/.config/alacritty/alacritty-theme/themes/base16_default_dark.toml"]
-import = ["~/.config/alacritty/alacritty-theme/themes/dark_plus.toml"]
+import = ["~/.config/alacritty/alacritty-theme/themes/catppuccin_mocha.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true

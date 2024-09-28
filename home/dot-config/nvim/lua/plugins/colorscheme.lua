@@ -29,19 +29,17 @@ return {
       transparent_background = false,
       background = {
         light = "latte",
-        dark = "frappe",
+        dark = "mocha",
+      },
+      dim_inactive = {
+        enabled = true,
       },
     },
   },
   {
-    "LunarVim/darkplus.nvim",
-    name = "darkplus",
-    opts = {},
-  },
-  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "darkplus",
+      colorscheme = "catppuccin",
     },
   },
 }
