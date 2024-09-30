@@ -49,8 +49,3 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
-
-# SHELL INTEGRATION
-# Disabling this because neovim's terminal from within tmux prints OSC escape sequences.
-# See https://github.com/wez/wezterm/issues/5007
-# source "${HOME}/.zsh/wezterm/shell_integration.sh"
