@@ -9,8 +9,8 @@ option_as_alt = "Both"
 [font]
 normal.family = "JetbrainsMonoNL Nerd Font"
 size = 13.0
-offset.x = 1
-offset.y = 5
+offset.x = 0
+offset.y = 2
 
 [mouse]
 hide_when_typing = true
