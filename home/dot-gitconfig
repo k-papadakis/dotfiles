@@ -1,20 +1,21 @@
 # Include user and credential info.
 [includeIf "gitdir/i:~/repos/personal/"]
-  path = ~/repos/personal/.gitconfig
+    path = ~/repos/personal/.gitconfig
 [includeIf "gitdir/i:~/repos/work/"]
-  path = ~/repos/work/.gitconfig
+    path = ~/repos/work/.gitconfig
 
 [include]
-  path = "./.themes.gitconfig"
+    path = "~/.themes.gitconfig"
 
 [core]
-  pager = delta
+    pager = delta
 [interactive]
-  diffFilter = delta --color-only
+    diffFilter = delta --color-only
 [delta]
-  features = catppuccin-mocha
-  navigate = true
+    # features = catppuccin-mocha
+    features = gruvmax-fang
+    navigate = true
 [merge]
-  conflictstyle = diff3
+    conflictstyle = diff3
 [diff]
-  colorMoved = default
+    colorMoved = default

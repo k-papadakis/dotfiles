@@ -15,9 +15,17 @@ return {
   { "RRethy/base16-nvim" },
   { "Mofiqul/vscode.nvim" },
   {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      dim_inactive = true,
+      contrast = "", -- can be "hard", "soft" or empty string
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      -- colorscheme = "catppuccin",
+      colorscheme = "gruvbox",
     },
   },
 }
