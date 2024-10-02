@@ -1,7 +1,7 @@
 {
   "CopilotChat.nvim": { "branch": "canary", "commit": "9333944fde3c65868818e245c73aa29eef826e9b" },
   "LazyVim": { "branch": "main", "commit": "d5a4ced75acadb6ae151c0d2960a531c691c88b9" },
-  "SchemaStore.nvim": { "branch": "main", "commit": "08618c584e38933731a1ef210b323a7588403dd2" },
+  "SchemaStore.nvim": { "branch": "main", "commit": "14e405d383a97766ff5d3432a4868d312090450d" },
   "base16-nvim": { "branch": "master", "commit": "6ac181b5733518040a33017dde654059cd771b7c" },
   "bufferline.nvim": { "branch": "main", "commit": "0b2fd861eee7595015b6561dade52fb060be10c4" },
   "catppuccin": { "branch": "main", "commit": "63685e1562ef53873c9764b483d7ac5c7a608922" },
@@ -45,7 +45,7 @@
   "nvim-dap-python": { "branch": "master", "commit": "db72bf6ab9f75fe841e8e11e772ee7fef6f484f1" },
   "nvim-dap-ui": { "branch": "master", "commit": "1c351e4e417d4691da12948b6ecf966936a56d28" },
   "nvim-dap-virtual-text": { "branch": "master", "commit": "3497eb39bf413a57ab5b7e7e2e192683e462148c" },
-  "nvim-lint": { "branch": "master", "commit": "968a35d54b3a4c1ce66609cf80b14d4ae44fe77f" },
+  "nvim-lint": { "branch": "master", "commit": "93b309e07f73897a57d7dbb2067ed5c3a5e15719" },
   "nvim-lspconfig": { "branch": "master", "commit": "e6569c18c21be5166e4b9cc7530e828b8285c84e" },
   "nvim-metals": { "branch": "main", "commit": "c2aed7519b93f4151b6dbb2378793c00096e1aa1" },
   "nvim-nio": { "branch": "master", "commit": "a428f309119086dc78dd4b19306d2d67be884eee" },
