@@ -43,6 +43,16 @@ brew bundle install
 - Open iTerm2, import [iterm2/myprofile.json](/iterm2/myprofile.json), and
   select it as the default.
 
+## Alacritty
+
+If on MacOS,
+[disable Apple's font smoothing for Alacritty](https://github.com/alacritty/alacritty/issues/7333#issuecomment-2128528068)
+so that your font is displayed properly.
+
+```bash
+defaults write org.alacritty AppleFontSmoothing -int 0
+```
+
 ## Additional installations
 
 - [GitHub Copilot CLI](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line)
