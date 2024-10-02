@@ -1,8 +1,5 @@
 # COMPLETIONS
 
-unsetopt LIST_BEEP
-setopt CORRECT_ALL
-
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' use-cache on
