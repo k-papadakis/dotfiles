@@ -1,5 +1,6 @@
 return {
   "kawre/leetcode.nvim",
+  lazy = vim.fn.argv(0) ~= "leetcode.nvim",
   build = ":TSUpdate html",
   dependencies = {
     "nvim-telescope/telescope.nvim",

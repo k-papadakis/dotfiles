@@ -12,10 +12,17 @@ return {
       },
     },
   },
-  { "RRethy/base16-nvim" },
-  { "Mofiqul/vscode.nvim" },
+  {
+    "RRethy/base16-nvim",
+    lazy = true,
+  },
+  {
+    "Mofiqul/vscode.nvim",
+    lazy = true,
+  },
   {
     "ellisonleao/gruvbox.nvim",
+    lazy = true,
     opts = {
       dim_inactive = true,
       contrast = "", -- can be "hard", "soft" or empty string
