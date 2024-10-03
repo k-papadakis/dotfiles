@@ -15,3 +15,5 @@ home/dot-config/zsh/.zsh_history
 home/dot-config/zsh/.zfunc/_cargo
 home/dot-config/zsh/.zfunc/_cs
 home/dot-config/zsh/.zprofile
+home/dot-config/zsh/.zcompcache
+home/dot-config/tmux/plugins
