@@ -17,3 +17,4 @@ home/dot-config/zsh/.zfunc/_cs
 home/dot-config/zsh/.zprofile
 home/dot-config/zsh/.zcompcache
 home/dot-config/tmux/plugins
+home/dot-config/btop/btop.log
