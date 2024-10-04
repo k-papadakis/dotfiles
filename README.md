@@ -2,85 +2,71 @@
 
 Configuration files.
 
-## Homebrew
+## Instructions for MacOS
 
-Install [homebrew](https://brew.sh/)
-
-```bash
+```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+git clone --recurse-submodules https://github.com/k-papadakis/dotfiles ~/repos/personal/dotfiles
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/repos/personal/dotfiles/home/dot-config/zsh/.zprofile
+brew bundle install --file ~/repos/personal/dotfiles/home/dot-config/homebrew/Brewfile
+
+mkdir ~/.config
+stow --verbose --restow --target=$HOME --dir ~/repos/personal/dotfiles --dotfiles home
+
+mkdir ~/.config/zsh/zfunc
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup completions zsh > ~/.config/zsh/zfunc/_rustup
+rustup completions zsh cargo > ~/.config/zsh/zfunc/_cargo
+
+gh auth login
+gh extension install github/gh-copilot
 ```
 
-## Symlinking
+> [!NOTE] If you get any errors about already existing files, manually back them
+> up and remove them.
 
-Install [stow](https://www.gnu.org/software/stow/) with
+Restart your shell.
+
+> [!TIP] >
+> [Fix font rendering for Alacritty](https://github.com/alacritty/alacritty/issues/7333#issuecomment-2128528068)
+> by running
+>
+> ```bash
+> defaults write org.alacritty AppleFontSmoothing -int 0
+> ```
+>
+> [!TIP] Enable touch id authentication for `sudo`, including from within tmux,
+> by running
+>
+> ```bash
+> sudo echo \
+> "auth       optional       $(brew --prefix)/lib/pam/pam_reattach.so       ignore_ssh
+> auth       sufficient     pam_tid.so" > /etc/pam.d/sudo_local
+> ```
+>
+> [!NOTE] To give the required privileges to Karabiner, follow the
+> [post installation instructions](https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-complex-modifications/)
+
+## Instructions for WSL
+
+For an installation on WSL, run the following, then restart your terminal, and
+then run the script in the MacOS section.
 
 ```bash
-brew install stow
+sudo add-apt-repository ppa:wslutilities/wslu
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update -y
+sudo apt install -y \
+  zsh \
+  wslu \
+  xclip \
+  pkg-config \
+  libssl-dev \
+  git \
+  build-essential \
+  ;
+
+chsh --shell "$(which zsh)"
 ```
-
-Create symbolic links with `stow`.
-
-```bash
-stow --verbose --restow --target=$HOME --dotfiles home
-```
-
-If you get any errors about already existing files, manually back them up and
-remove them.
-
-## Homebrew Bundle
-
-Most of the programs that are used or referenced by the configuration files, as
-well as other useful programs, can be installed by running
-
-```bash
-brew bundle install
-```
-
-## iTerm2
-
-- Open [iterm2/myprofile.json](/iterm2/myprofile.json) and edit the
-  `Working Directory` field to your home directory.
-- Open iTerm2, import [iterm2/myprofile.json](/iterm2/myprofile.json), and
-  select it as the default.
-
-## Alacritty
-
-If on MacOS,
-[disable Apple's font smoothing for Alacritty](https://github.com/alacritty/alacritty/issues/7333#issuecomment-2128528068)
-so that your font is displayed properly.
-
-```bash
-defaults write org.alacritty AppleFontSmoothing -int 0
-```
-
-## Additional installations
-
-- [GitHub Copilot CLI](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line)
-
-- [Rust](https://www.rust-lang.org/tools/install)
-
-- [Podman](https://podman.io/docs/installation)
-
-### Next steps
-
-#### Autocompletions
-
-Create autocompletions for each program, according to each programs
-instructions.
-
-#### PAM
-
-Enable touch id authentication for `sudo`, including from within tmux, by
-running
-
-```bash
-sudo echo \
-"auth       optional       $(brew --prefix)/lib/pam/pam_reattach.so       ignore_ssh
-auth       sufficient     pam_tid.so" > /etc/pam.d/sudo_local
-```
-
-#### Karabiner
-
-To give the required privileges to Karabiner, follow the
-[post installation instructions](https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-complex-modifications/)
-.
