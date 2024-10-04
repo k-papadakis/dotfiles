@@ -24,7 +24,6 @@ else
 fi
 export EDITOR="${VISUAL}"
 export LESS="-i"
-export TINTED_TMUX_OPTION_STATUSBAR=1
 HISTFILE="${ZDOTDIR}/.zsh_history"
 HISTSIZE=50000
 SAVEHIST=10000
