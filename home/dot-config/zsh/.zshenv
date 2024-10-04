@@ -7,8 +7,13 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 # export BAT_THEME="Catppuccin Mocha"
 export BAT_THEME="gruvbox-dark"
 export PATH="${PATH}:${HOME}/.local/bin"
-# Use bat for man pages
-export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain'"
+# The colors are messed up when using bat for manpages on linux.
+# Nvim is great for manpaging, although a bit slow.
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  export MANPAGER='nvim +Man!'
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain'"
+fi
 # Prevent Podman from using the OCI format
 export BUILDAH_FORMAT=docker
 # Default Editor
