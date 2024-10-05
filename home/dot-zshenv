@@ -1,2 +1,4 @@
+# vim: filetype=zsh
+
 export ZDOTDIR="${HOME}/.config/zsh"
 . ${ZDOTDIR}/.zshenv
