@@ -2,9 +2,7 @@ return {
   {
     "catppuccin/nvim",
     opts = {
-      transparent_background = false,
       background = {
-        light = "latte",
         dark = "mocha",
       },
       dim_inactive = {
@@ -31,8 +29,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "catppuccin",
-      colorscheme = "gruvbox",
+      colorscheme = "catppuccin",
+      -- colorscheme = "gruvbox",
     },
   },
 }

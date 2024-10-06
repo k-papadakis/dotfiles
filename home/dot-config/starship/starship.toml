@@ -1,5 +1,5 @@
-# palette = "catppuccin_mocha"
-palette = "gruvbox_dark"
+palette = "catppuccin_mocha"
+# palette = "gruvbox_dark"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"

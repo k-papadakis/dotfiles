@@ -4,3 +4,6 @@
 [submodule "home/dot-config/zsh/themes/fzf/tinted-fzf"]
 	path = home/dot-config/zsh/themes/fzf/tinted-fzf
 	url = https://github.com/tinted-theming/tinted-fzf
+[submodule "home/dot-config/alacritty/catppuccin-alacritty"]
+	path = home/dot-config/alacritty/catppuccin-alacritty
+	url = https://github.com/catppuccin/alacritty

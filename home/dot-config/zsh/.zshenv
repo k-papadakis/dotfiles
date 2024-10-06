@@ -4,8 +4,8 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 
 export HOMEBREW_BUNDLE_FILE="${XDG_CONFIG_HOME}/homebrew/Brewfile"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
-# export BAT_THEME="Catppuccin Mocha"
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="Catppuccin Mocha"
+# export BAT_THEME="gruvbox-dark"
 export PATH="${PATH}:${HOME}/.local/bin"
 # The colors are messed up when using bat for manpages on linux.
 # Nvim is great for manpaging, although a bit slow.
