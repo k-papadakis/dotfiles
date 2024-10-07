@@ -1,6 +1,10 @@
 import = ["~/.config/alacritty/catppuccin-alacritty/catppuccin-mocha.toml"]
 # import = ["~/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"]
 
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux new-session -A"]
+
 [env]
 LC_ALL = "C.UTF-8"
 
