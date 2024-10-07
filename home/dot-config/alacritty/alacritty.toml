@@ -5,8 +5,8 @@ import = ["~/.config/alacritty/catppuccin-alacritty/catppuccin-mocha.toml"]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux new-session -A"]
 
-[env]
-LC_ALL = "C.UTF-8"
+# [env]
+# LC_ALL = "C.UTF-8"
 
 [colors]
 draw_bold_text_with_bright_colors = true
