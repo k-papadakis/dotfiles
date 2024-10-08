@@ -14,8 +14,8 @@
 [interactive]
     diffFilter = delta --color-only
 [delta]
-    # features = catppuccin-mocha
-    features = gruvmax-fang
+    features = catppuccin-macchiato
+    # features = gruvmax-fang
     navigate = true
 [merge]
     conflictstyle = diff3
