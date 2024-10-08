@@ -7,7 +7,7 @@
     path = ~/repos/work/.gitconfig
 
 [include]
-    path = "~/.themes.gitconfig"
+    path = "~/.config/git/themes"
 
 [core]
     pager = delta
