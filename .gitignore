@@ -10,7 +10,7 @@ home/dot-config/wezterm/images
 home/dot-config/zsh/.zfunc/_podman
 home/dot-config/zsh/.zfunc/_ruff
 home/dot-config/zsh/.zfunc/_rustup
-home/dot-config/zsh/.zcompdump
+home/dot-config/zsh/.zcompdump*
 home/dot-config/zsh/.zsh_history
 home/dot-config/zsh/.zfunc/_cargo
 home/dot-config/zsh/.zfunc/_cs

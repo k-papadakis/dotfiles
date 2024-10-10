@@ -23,6 +23,8 @@ mkdir ~/.config
 stow --verbose --restow --target="$HOME" \
   --dir ~/repos/personal/dotfiles --dotfiles home
 
+bat cache --build
+
 mkdir ~/.config/zsh/zfunc
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup completions zsh >~/.config/zsh/zfunc/_rustup
@@ -74,6 +76,7 @@ sudo apt install -y \
   libssl-dev \
   git \
   build-essential \
+  direnv \
   ;
 
 chsh --shell "$(which zsh)"
