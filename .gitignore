@@ -1,12 +1,6 @@
-home/dot-config/lazygit/*
-!home/dot-config/lazygit/config.yml
-
+.DS_Store
 home/dot-config/karabiner/*
 !home/dot-config/karabiner/karabiner.json
-
-home/dot-config/wezterm/images
-
-.DS_Store
 home/dot-config/zsh/.zfunc/_podman
 home/dot-config/zsh/.zfunc/_ruff
 home/dot-config/zsh/.zfunc/_rustup
