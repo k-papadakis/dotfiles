@@ -10,11 +10,16 @@ Run the following commands, and then restart your terminal. If you get any
 errors about already existing files, manually back them up and remove them.
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 git clone --recurse-submodules https://github.com/k-papadakis/dotfiles ~/repos/personal/dotfiles
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' \
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  brew_bin=/home/linuxbrew/.linuxbrew/bin/brew
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  brew_bin=/opt/homebrew/bin/brew
+fi
+eval "\$($brew_bin shellenv)"
+echo "eval \$($brew_bin shellenv)" \
   >>~/repos/personal/dotfiles/home/dot-config/zsh/.zprofile
 brew bundle install --file \
   ~/repos/personal/dotfiles/home/dot-config/homebrew/Brewfile
