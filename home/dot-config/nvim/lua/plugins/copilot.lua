@@ -7,6 +7,9 @@ return {
       "<leader>at",
       function()
         require("copilot.suggestion").toggle_auto_trigger()
+        LazyVim.info(
+          vim.b.copilot_suggestion_auto_trigger and "Enabled Copilot Auto Trigger" or "Disabled Copilot Auto Trigger"
+        )
       end,
       desc = "Toggle Auto Trigger (Buffer) (Copilot)",
     },
