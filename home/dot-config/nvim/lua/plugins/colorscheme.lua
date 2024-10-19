@@ -6,7 +6,7 @@ return {
         dark = "macchiato",
       },
       dim_inactive = {
-        enabled = true,
+        enabled = false,
       },
     },
   },
@@ -22,7 +22,7 @@ return {
     "ellisonleao/gruvbox.nvim",
     lazy = true,
     opts = {
-      dim_inactive = true,
+      dim_inactive = false,
       contrast = "", -- can be "hard", "soft" or empty string
     },
   },
