@@ -1,7 +1,8 @@
-import = ["~/.config/alacritty/catppuccin-alacritty/catppuccin-macchiato.toml"]
-# import = ["~/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"]
+[general]
+import = ["./catppuccin-alacritty/catppuccin-macchiato.toml"]
+# import = ["./alacritty-theme/themes/gruvbox_dark.toml"]
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux new-session -A"]
 
@@ -17,7 +18,7 @@ option_as_alt = "Both"
 [font]
 normal.family = "JetbrainsMonoNL Nerd Font"
 normal.style = "Regular"
-size = 15.0
+size = 14.0
 
 [mouse]
 hide_when_typing = true
