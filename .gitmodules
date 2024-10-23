@@ -7,3 +7,6 @@
 [submodule "home/dot-config/alacritty/catppuccin-alacritty"]
 	path = home/dot-config/alacritty/catppuccin-alacritty
 	url = https://github.com/catppuccin/alacritty
+[submodule "home/dot-config/tmux/catppuccin/plugin"]
+	path = home/dot-config/tmux/catppuccin/plugin
+	url = https://github.com/catppuccin/tmux
