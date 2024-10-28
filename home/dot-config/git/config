@@ -1,10 +1,10 @@
 # vim: filetype=gitconfig
 
 # Include user and credential info.
-[includeIf "gitdir/i:~/repos/personal/"]
-    path = ~/repos/personal/.gitconfig
-[includeIf "gitdir/i:~/repos/work/"]
-    path = ~/repos/work/.gitconfig
+[includeIf "gitdir/i:~/projects/personal/"]
+    path = ~/projects/personal/.gitconfig
+[includeIf "gitdir/i:~/projects/work/"]
+    path = ~/projects/work/.gitconfig
 
 [include]
     path = "~/.config/git/themes"

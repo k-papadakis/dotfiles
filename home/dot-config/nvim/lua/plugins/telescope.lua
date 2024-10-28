@@ -6,7 +6,7 @@ return {
         "<leader>fd",
         function()
           require("telescope.builtin").git_files({
-            cwd = "~/repos/personal/dotfiles",
+            cwd = "~/projects/personal/dotfiles",
           })
         end,
         desc = "Find Dotfiles",

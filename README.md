@@ -10,7 +10,7 @@ Run the following commands, and then restart your terminal. If you get any
 errors about already existing files, manually back them up and remove them.
 
 ```bash
-git clone --recurse-submodules https://github.com/k-papadakis/dotfiles ~/repos/personal/dotfiles
+git clone --recurse-submodules https://github.com/k-papadakis/dotfiles ~/projects/personal/dotfiles
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -20,13 +20,13 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 eval "\$($brew_bin shellenv)"
 echo "eval \$($brew_bin shellenv)" \
-  >>~/repos/personal/dotfiles/home/dot-config/zsh/.zprofile
+  >>~/projects/personal/dotfiles/home/dot-config/zsh/.zprofile
 brew bundle install --file \
-  ~/repos/personal/dotfiles/home/dot-config/homebrew/Brewfile
+  ~/projects/personal/dotfiles/home/dot-config/homebrew/Brewfile
 
 mkdir ~/.config
 stow --verbose --restow --target="$HOME" \
-  --dir ~/repos/personal/dotfiles --dotfiles home
+  --dir ~/projects/personal/dotfiles --dotfiles home
 
 bat cache --build
 
