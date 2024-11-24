@@ -6,6 +6,7 @@ return {
       -- FIXME: gitlab_ci_ls is supposed to have more functionality, like gd
       gitlab_ci_ls = {},
       yamlls = {},
+      jqls = {},
     },
   },
 }
