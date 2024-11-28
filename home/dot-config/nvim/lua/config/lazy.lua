@@ -37,6 +37,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.toml" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.test.core" },
+    -- TODO: Uncomment when it gets released.
+    -- { import = "lazyvim.plugins.extras.ui.smear-cursor" },
     { import = "lazyvim.plugins.extras.ui.treesitter-context" },
     { import = "lazyvim.plugins.extras.vscode" },
     { import = "plugins" },
