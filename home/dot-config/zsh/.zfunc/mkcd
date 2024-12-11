@@ -1,0 +1,4 @@
+# vim: filetype=zsh
+mkcd() {
+  mkdir "$@" && cd "${@: -1}"
+}

@@ -3,6 +3,9 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
+fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
+fpath+=${ZDOTDIR}/.zfunc
+
 export HOMEBREW_BUNDLE_FILE="${XDG_CONFIG_HOME}/homebrew/Brewfile"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 export BAT_THEME="Catppuccin Macchiato"
