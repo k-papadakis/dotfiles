@@ -5,7 +5,5 @@ return {
     keymap = {
       preset = "default",
     },
-    -- `auto_brackets` does not work properly yet.
-    accept = { auto_brackets = { enabled = false } },
   },
 }
