@@ -1,12 +1,11 @@
 return {
   {
     "catppuccin/nvim",
+    lazy = true,
+    name = "catppuccin",
     opts = {
       background = {
         dark = "macchiato",
-      },
-      dim_inactive = {
-        enabled = false,
       },
     },
   },
