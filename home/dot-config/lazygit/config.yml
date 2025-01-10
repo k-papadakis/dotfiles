@@ -2,3 +2,5 @@ git:
   paging:
     colorArg: always
     pager: delta --paging=never
+services:
+  gitlab.kaizengaming.eu: gitlab:gitlab.kaizengaming.eu
