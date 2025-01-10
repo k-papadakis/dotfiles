@@ -22,4 +22,4 @@
 [diff]
     colorMoved = default
 [alias]
-  browse = "!git remote get-url origin | xargs --no-run-if-empty open"
+    browse = "!git remote get-url origin | sed 's/\\.git$//' | xargs --no-run-if-empty open"
