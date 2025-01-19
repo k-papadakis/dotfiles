@@ -1,9 +1,5 @@
 # ALIASES
 
-# TODO: Remove this when this issue gets fixed
-# https://github.com/jesseduffield/lazygit/issues/3668
-alias lazygit='[[ $TERM == "tmux-256color" ]] && env TERM=screen-256color lazygit || lazygit'
-
 alias v='nvim'
 alias docker='podman'
 alias cd='z'
