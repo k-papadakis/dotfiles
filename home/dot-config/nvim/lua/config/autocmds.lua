@@ -9,7 +9,7 @@
 
 -- Creating the yaml.gitlab filetype for gitlab-ci-ls and yamlls
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = "*.gitlab-ci*.{yml,yaml}",
+  pattern = { "*.gitlab-ci*.{yml,yaml}", "*/devops/*.{yml,yaml}" },
   callback = function()
     vim.bo.filetype = "yaml.gitlab"
   end,
