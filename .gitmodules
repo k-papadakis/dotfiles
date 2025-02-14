@@ -1,12 +1,9 @@
 [submodule "home/dot-config/alacritty/alacritty-theme"]
 	path = home/dot-config/alacritty/alacritty-theme
 	url = https://github.com/alacritty/alacritty-theme
-[submodule "home/dot-config/zsh/themes/fzf/tinted-fzf"]
-	path = home/dot-config/zsh/themes/fzf/tinted-fzf
-	url = https://github.com/tinted-theming/tinted-fzf
 [submodule "home/dot-config/alacritty/catppuccin-alacritty"]
 	path = home/dot-config/alacritty/catppuccin-alacritty
 	url = https://github.com/catppuccin/alacritty
-[submodule "home/dot-config/tmux/catppuccin/plugin"]
-	path = home/dot-config/tmux/catppuccin/plugin
-	url = https://github.com/catppuccin/tmux
+[submodule "home/dot-config/tmux/tmux-catppuccin"]
+	path = home/dot-config/tmux/tmux-catppuccin
+	url = https://github.com/catppuccin/tmux.git
