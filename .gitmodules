@@ -7,3 +7,6 @@
 [submodule "home/dot-config/tmux/tmux-catppuccin"]
 	path = home/dot-config/tmux/tmux-catppuccin
 	url = https://github.com/catppuccin/tmux.git
+[submodule "home/dot-config/zsh/themes/fzf/tinted-fzf"]
+	path = home/dot-config/zsh/themes/fzf/tinted-fzf
+	url = https://github.com/tinted-theming/tinted-fzf.git
