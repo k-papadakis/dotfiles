@@ -5,7 +5,7 @@ return {
     name = "catppuccin",
     opts = {
       background = {
-        dark = "macchiato",
+        dark = "frappe",
       },
     },
   },
@@ -37,8 +37,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "catppuccin",
-      colorscheme = "gruvbox-material",
+      colorscheme = "catppuccin",
+      -- colorscheme = "gruvbox-material",
     },
   },
 }
