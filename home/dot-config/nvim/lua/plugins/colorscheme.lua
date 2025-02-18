@@ -5,7 +5,7 @@ return {
     name = "catppuccin",
     opts = {
       background = {
-        dark = "frappe",
+        dark = "macchiato",
       },
     },
   },

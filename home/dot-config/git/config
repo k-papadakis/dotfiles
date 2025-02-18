@@ -14,7 +14,7 @@
 [interactive]
     diffFilter = delta --color-only
 [delta]
-    features = catppuccin-frappe
+    features = catppuccin-macchiato
     # syntax-theme = gruvbox-material-dark
     navigate = true
 [merge]

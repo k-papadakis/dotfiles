@@ -10,3 +10,9 @@
 [submodule "home/dot-config/zsh/themes/fzf/tinted-fzf"]
 	path = home/dot-config/zsh/themes/fzf/tinted-fzf
 	url = https://github.com/tinted-theming/tinted-fzf.git
+[submodule "home/dot-config/bat/themes/catppuccin"]
+	path = home/dot-config/bat/themes/catppuccin
+	url = https://github.com/catppuccin/bat.git
+[submodule "home/dot-config/zsh/themes/zsh-syntax-highlighting/catppuccin"]
+	path = home/dot-config/zsh/themes/zsh-syntax-highlighting/catppuccin
+	url = https://github.com/catppuccin/zsh-syntax-highlighting

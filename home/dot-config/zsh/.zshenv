@@ -8,7 +8,7 @@ fpath+=${ZDOTDIR}/.zfunc
 
 export HOMEBREW_BUNDLE_FILE="${XDG_CONFIG_HOME}/homebrew/Brewfile"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
-export BAT_THEME="Catppuccin Frappe"
+export BAT_THEME="Catppuccin Macchiato"
 # export BAT_THEME="gruvbox-material-dark"
 export PATH="${PATH}:${HOME}/.local/bin"
 # The colors are messed up when using bat for manpages on linux.
