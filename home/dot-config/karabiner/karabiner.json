@@ -24,11 +24,11 @@
                         ]
                     },
                     {
-                        "description": "enter: {tap: enter, combine: rctrl}",
+                        "description": "quote: {tap: quote, combine: rctrl}",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "return_or_enter",
+                                    "key_code": "quote",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -37,7 +37,7 @@
                                         "lazy": true
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "return_or_enter" }],
+                                "to_if_alone": [{ "key_code": "quote" }],
                                 "type": "basic"
                             }
                         ]
