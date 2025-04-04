@@ -41,6 +41,54 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Open Terminal by opt+shift+t",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": {
+                                        "mandatory": ["option", "shift"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Alacritty.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Open Browser by opt+shift+b",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": {
+                                        "mandatory": ["option", "shift"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Google Chrome.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Open Slack by opt+shift+s",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "mandatory": ["option", "shift"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Slack.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
