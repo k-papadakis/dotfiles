@@ -72,6 +72,38 @@
             ]
           },
           {
+            "description": "Control+w to delete word if not in Terminal",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": ["option"],
+                    "repeat": false,
+                    "lazy": true
+                  }
+                ],
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^org.alacritty$",
+                      "^com.googlecode.iterm2$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Open Terminal by opt+shift+t",
             "manipulators": [
               {
