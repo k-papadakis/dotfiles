@@ -1,4 +1,3 @@
--- TODO: Add https://github.com/yetone/avante.nvim
 return {
   "zbirenbaum/copilot.lua",
   opts = {
@@ -23,6 +22,6 @@ return {
           end
         end,
       })
-      :map("<leader>at")
+      :map("<leader>aT")
   end,
 }
