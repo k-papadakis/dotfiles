@@ -15,6 +15,16 @@ return {
     },
   },
   opts = {
+    picker = {
+      win = {
+        input = {
+          keys = {
+            ["<c-u>"] = "",
+            ["<c-d>"] = "",
+          },
+        },
+      },
+    },
     dashboard = {
       preset = {
         header = [[
