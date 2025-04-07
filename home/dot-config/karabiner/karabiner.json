@@ -97,6 +97,35 @@
             ]
           },
           {
+            "description": "Control+h to Backspace if not in Terminal",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace"
+                  }
+                ],
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^org.alacritty$",
+                      "^com.googlecode.iterm2$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Control+w to delete word if not in Terminal",
             "manipulators": [
               {
