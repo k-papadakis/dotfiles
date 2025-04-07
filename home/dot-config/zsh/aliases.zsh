@@ -1,5 +1,7 @@
 # ALIASES
 
+alias clear='echo "Use ^L instead of clear"'
+
 alias v='nvim'
 alias docker='podman'
 alias cd='z'
