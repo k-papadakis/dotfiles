@@ -226,13 +226,13 @@
             ]
           },
           {
-            "description": "Open Terminal by opt+shift+t",
+            "description": "Open Terminal by cmd+opt+ctrl+shift+t",
             "manipulators": [
               {
                 "from": {
                   "key_code": "t",
                   "modifiers": {
-                    "mandatory": ["option", "shift"],
+                    "mandatory": ["command", "option", "control", "shift"],
                     "optional": ["caps_lock"]
                   }
                 },
@@ -250,13 +250,13 @@
             ]
           },
           {
-            "description": "Open Browser by opt+shift+b",
+            "description": "Open Browser by cmd+opt+ctrl+shift+b",
             "manipulators": [
               {
                 "from": {
                   "key_code": "b",
                   "modifiers": {
-                    "mandatory": ["option", "shift"],
+                    "mandatory": ["command", "option", "control", "shift"],
                     "optional": ["caps_lock"]
                   }
                 },
@@ -274,13 +274,13 @@
             ]
           },
           {
-            "description": "Open Slack by opt+shift+s",
+            "description": "Open Slack by cmd+opt+ctrl+shift+s",
             "manipulators": [
               {
                 "from": {
                   "key_code": "s",
                   "modifiers": {
-                    "mandatory": ["option", "shift"],
+                    "mandatory": ["command", "option", "control", "shift"],
                     "optional": ["caps_lock"]
                   }
                 },
