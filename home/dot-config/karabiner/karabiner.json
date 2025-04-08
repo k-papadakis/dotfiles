@@ -43,6 +43,26 @@
             ]
           },
           {
+            "description": "Enter: {tap: Enter, combine: Cmd+Opt+Ctrl+Shift}",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "return_or_enter"
+                },
+                "to": {
+                  "key_code": "right_shift",
+                  "modifiers": [
+                    "right_command",
+                    "right_option",
+                    "right_control"
+                  ]
+                },
+                "to_if_alone": [{ "key_code": "return_or_enter" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "<-: {tap: <-, combine: rctrl} (Mac Keyboard)",
             "manipulators": [
               {
