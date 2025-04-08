@@ -6,9 +6,6 @@ return {
     },
   },
   config = function(_, opts)
-    -- HACK: https://github.com/LazyVim/LazyVim/issues/5899#issuecomment-2781398031
-    require("copilot.api").status = require("copilot.status")
-
     require("copilot").setup(opts)
 
     -- https://github.com/LazyVim/LazyVim/discussions/4232#discussioncomment-11191278
