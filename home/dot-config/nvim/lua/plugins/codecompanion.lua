@@ -27,7 +27,7 @@ return {
       chat = {
         keymaps = {
           clear = {
-            modes = { n = "gl", i = "<C-l>" },
+            modes = { n = "gl" },
           },
         },
         adapter = "copilot",
