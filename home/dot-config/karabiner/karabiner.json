@@ -153,7 +153,7 @@
             ]
           },
           {
-            "description": "Control+u to delete till start of line if not in Terminal",
+            "description": "Control+u to delete till start of line if not in Terminal or in Editors",
             "manipulators": [
               {
                 "from": {
@@ -177,7 +177,9 @@
                     "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^org.alacritty$",
-                      "^com.googlecode.iterm2$"
+                      "^com.googlecode.iterm2$",
+                      "^com.microsoft.VSCode$",
+                      "^com.jetbrains.*$"
                     ]
                   }
                 ]
