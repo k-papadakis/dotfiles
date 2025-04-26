@@ -16,6 +16,7 @@ return {
   },
   opts = {
     picker = {
+      hidden = true,
       win = {
         input = {
           keys = {
