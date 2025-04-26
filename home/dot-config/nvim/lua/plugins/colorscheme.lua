@@ -14,9 +14,21 @@ return {
     lazy = true,
   },
   {
+    "rebelot/kanagawa.nvim",
+    lazy = true,
+    init = function()
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        pattern = "kanagawa",
+        callback = function()
+          vim.api.nvim_set_hl(0, "StatusLine", { link = "lualine_c_normal" })
+        end,
+      })
+    end,
+  },
+  {
     "sainnhe/gruvbox-material",
     lazy = true,
-    config = function()
+    init = function()
       vim.g.gruvbox_material_float_style = "dim"
       vim.g.gruvbox_material_diagnostic_virtual_text = "colored"
       vim.g.gruvbox_material_diagnostic_line_highlight = 1
@@ -37,7 +49,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "kanagawa",
       -- colorscheme = "gruvbox-material",
     },
   },

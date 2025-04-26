@@ -14,8 +14,9 @@
 [interactive]
     diffFilter = delta --color-only
 [delta]
-    features = catppuccin-macchiato
+    # features = catppuccin-macchiato
     # syntax-theme = gruvbox-material-dark
+    syntax-theme = kanagawa
     navigate = true
 [merge]
     conflictstyle = zdiff3

@@ -1,6 +1,7 @@
 [general]
-import = ["./catppuccin-alacritty/catppuccin-macchiato.toml"]
+# import = ["./catppuccin-alacritty/catppuccin-macchiato.toml"]
 # import = ["./gruvbox_material_medium_dark_patched.toml"]
+import = ["alacritty-theme/themes/kanagawa_wave.toml"]
 
 [terminal.shell]
 program = "/bin/zsh"
