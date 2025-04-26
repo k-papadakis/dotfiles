@@ -5,9 +5,7 @@ return {
       yaml = true,
     },
   },
-  config = function(_, opts)
-    require("copilot").setup(opts)
-
+  init = function()
     -- https://github.com/LazyVim/LazyVim/discussions/4232#discussioncomment-11191278
     require("snacks")
       .toggle({
