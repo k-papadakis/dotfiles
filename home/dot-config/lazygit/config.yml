@@ -3,6 +3,7 @@ git:
     colorArg: always
     pager: delta --paging=never
   autoForwardBranches: allBranches
+  overrideGpg: true
 services:
   gitlab.kaizengaming.eu: gitlab:gitlab.kaizengaming.eu
 gui:
