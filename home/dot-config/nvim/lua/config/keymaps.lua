@@ -3,8 +3,6 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 
-map("i", "jk", "<ESC>", { silent = true })
-
 -- Record [count]Up/Down to the jump list
 map({ "n", "x" }, "j", function()
   return vim.v.count > 0 and "m'" .. vim.v.count .. "j" or "gj"
