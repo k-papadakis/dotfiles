@@ -23,7 +23,25 @@
 [diff]
     colorMoved = default
 [alias]
-    browse = "!git remote get-url origin | sed 's/\\.git$//' | xargs --no-run-if-empty open"
+    browse = "! \
+        url=$(git remote get-url origin); \
+        case \"$url\" in \
+            git@*:*) \
+                domain=${url%%:*}; \
+                domain=${domain##git@}; \
+                path=${url#*:}; \
+                path=${path%.git}; \
+                url=\"https://$domain/$path\";; \
+            https://*) \
+                url=${url%.git};; \
+        esac; \
+        if [ -n \"$url\" ]; then \
+            echo \"Opening $url\"; \
+            open \"$url\"; \
+        else \
+            echo \"No URL found\"; >&2 \
+            exit 1; \
+        fi"
 [merge]
   tool = nvim
 [mergetool "nvim"]
