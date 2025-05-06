@@ -4,6 +4,13 @@ return {
     filetypes = {
       yaml = true,
     },
+    server_opts_overrides = {
+      settings = {
+        telemetry = {
+          telemetryLevel = "off",
+        },
+      },
+    },
   },
   init = function()
     -- https://github.com/LazyVim/LazyVim/discussions/4232#discussioncomment-11191278
