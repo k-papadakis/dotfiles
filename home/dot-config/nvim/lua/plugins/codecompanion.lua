@@ -33,5 +33,10 @@ return {
         adapter = "copilot",
       },
     },
+    display = {
+      action_palette = {
+        provider = "snacks",
+      },
+    },
   },
 }
