@@ -67,7 +67,7 @@ To give the required privileges to Karabiner, follow the
 ## Instructions for WSL
 
 For an installation on WSL, run the following, then restart your terminal, and
-then run the script of the MacOS section.
+then run the [Script](#script) of the MacOS section.
 
 ```bash
 sudo add-apt-repository ppa:wslutilities/wslu
