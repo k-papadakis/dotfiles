@@ -62,7 +62,7 @@ auth       sufficient     pam_tid.so" > /etc/pam.d/sudo_local
 ### Karabiner
 
 To give the required privileges to Karabiner, follow the
-[post installation instructions](https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-complex-modifications/)
+[post installation instructions](https://karabiner-elements.pqrs.org/docs/getting-started/installation/#open-karabiner-elements-settings)
 
 ## Instructions for WSL
 
