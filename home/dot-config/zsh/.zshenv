@@ -29,9 +29,6 @@ else
 fi
 export EDITOR="${VISUAL}"
 export LESS="-i"
-HISTFILE="${ZDOTDIR}/.zsh_history"
-HISTSIZE=50000
-SAVEHIST=10000
 # Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/theme-and-appearance.zsh
 # Sets color variable such as $fg, $bg, $color and $reset_color
 autoload -U colors && colors

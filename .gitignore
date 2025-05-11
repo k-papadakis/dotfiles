@@ -2,10 +2,7 @@
 home/dot-config/karabiner/*
 !home/dot-config/karabiner/karabiner.json
 home/dot-config/zsh/.zfunc/_*
-home/dot-config/zsh/.zcompdump*
-home/dot-config/zsh/.zsh_history
 home/dot-config/zsh/.zprofile
-home/dot-config/zsh/.zcompcache
 home/dot-config/tmux/plugins
 home/dot-config/btop/btop.log
 home/dot-config/zsh/.zsh_sessions

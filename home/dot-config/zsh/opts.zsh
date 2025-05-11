@@ -1,3 +1,9 @@
+[ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh
+
+HISTFILE="$XDG_STATE_HOME"/zsh/history
+HISTSIZE=50000
+SAVEHIST=10000
+
 unsetopt LIST_BEEP
 setopt CORRECT_ALL
 setopt INTERACTIVE_COMMENTS
