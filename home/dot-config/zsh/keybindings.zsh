@@ -1,5 +1,3 @@
-# KEYBINDINGS
-
 # When $EDITOR contains "vi", zsh automatically sets `bindkey -v`
 # Revert it back to emacs keybindings.
 bindkey -e

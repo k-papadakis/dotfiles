@@ -1,5 +1,3 @@
-# PROGRAMS
-
 eval "$(starship init zsh)"
 eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"

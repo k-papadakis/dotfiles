@@ -1,5 +1,3 @@
-# ALIASES
-
 alias v='nvim'
 alias docker='podman'
 alias cd='z'
