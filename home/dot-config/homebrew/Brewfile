@@ -8,7 +8,7 @@ brew "btop"
 brew "cmatrix"
 brew "coursier/formulas/coursier"
 brew "databricks/tap/databricks"
-brew "direnv"
+brew "direnv" if OS.mac?
 brew "eza"
 brew "fd"
 brew "ffmpeg"
