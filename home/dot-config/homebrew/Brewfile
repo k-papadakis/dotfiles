@@ -1,5 +1,9 @@
 # vim: ft=ruby
 
+tap "coursier/formulas"
+tap "databricks/tap"
+tap "homebrew/bundle"
+
 brew "ast-grep"
 brew "azure-cli"
 brew "bashdb"
@@ -69,6 +73,3 @@ cask "gpg-suite-no-mail"
 cask "karabiner-elements"
 cask "obsidian"
 cask "basictex"
-tap "coursier/formulas"
-tap "databricks/tap"
-tap "homebrew/bundle"
