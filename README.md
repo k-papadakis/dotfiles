@@ -6,8 +6,9 @@ Configuration files.
 
 ### Script
 
-Run the following commands, and then restart your terminal. If you get any
-errors about already existing files, manually back them up and remove them.
+Run the following commands, and then restart your terminal (press `q` when
+prompted by zsh). If you get any errors about already existing files, manually
+back them up and remove them.
 
 ```bash
 git clone --recurse-submodules https://github.com/k-papadakis/dotfiles ~/projects/personal/dotfiles
