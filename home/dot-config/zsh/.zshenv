@@ -11,7 +11,7 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 # export BAT_THEME="Catppuccin Macchiato"
 # export BAT_THEME="gruvbox-material-dark"
 export BAT_THEME="kanagawa"
-export PATH="${PATH}:${HOME}/.local/bin"
+export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.cargo/bin"
 # The colors are messed up when using bat for manpages on linux.
 # Nvim is great for manpaging, although a bit slow.
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
