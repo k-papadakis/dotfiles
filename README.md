@@ -107,14 +107,14 @@ program = "wsl"
 args = ["-d", "Ubuntu-24.04", "--cd", "~", "--", "tmux new-session -A"]
 ```
 
-The theme that is used in To include a specific theme e.g. with
+Imported files (e.g. themes)
 
 ```toml
 [general]
 import = ["./alacritty-theme/themes/kanagawa_wave.toml"]
 ```
 
-you will need to have it available locally, e.g. by
+need to be available locally, e.g. by running
 
 ```powershell
 git clone https://github.com/alacritty/alacritty-theme.git "${env:APPDATA}\alacritty\alacritty-theme"
