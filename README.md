@@ -14,13 +14,10 @@ git clone --recurse-submodules https://github.com/k-papadakis/dotfiles ~/project
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  brew_bin=/home/linuxbrew/.linuxbrew/bin/brew
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  brew_bin=/opt/homebrew/bin/brew
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-eval "\$($brew_bin shellenv)"
-echo "eval \$($brew_bin shellenv)" \
-  >>~/projects/personal/dotfiles/home/dot-config/zsh/.zprofile
 brew bundle install --file \
   ~/projects/personal/dotfiles/home/dot-config/homebrew/Brewfile
 
