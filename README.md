@@ -28,7 +28,7 @@ stow --verbose --restow --target="$HOME" \
 
 bat cache --build
 
-mkdir ~/.config/zsh/zfunc
+mkdir ~/.config/zsh/.zfunc
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup completions zsh >~/.config/zsh/.zfunc/_rustup
 rustup completions zsh cargo >~/.config/zsh/.zfunc/_cargo
