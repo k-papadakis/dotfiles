@@ -8,6 +8,3 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 autoload -Uz bashcompinit && bashcompinit
-
-complete -o nospace -C terraform terraform
-source "${HOMEBREW_PREFIX}/etc/bash_completion.d/az"
