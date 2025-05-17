@@ -7,9 +7,6 @@ import = ["alacritty-theme/themes/kanagawa_wave.toml"]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux new-session -A"]
 
-[env]
-LC_CTYPE = "el_GR.UTF-8"
-
 [colors]
 draw_bold_text_with_bright_colors = true
 
@@ -19,7 +16,7 @@ option_as_alt = "Both"
 [font]
 normal.family = "JetbrainsMonoNL Nerd Font"
 normal.style = "Regular"
-size = 15.0
+size = 11.0
 
 [mouse]
 hide_when_typing = true
