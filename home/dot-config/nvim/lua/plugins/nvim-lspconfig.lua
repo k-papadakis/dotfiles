@@ -2,6 +2,7 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
+      hyprls = {},
       bashls = {},
       gitlab_ci_ls = {},
       yamlls = {
