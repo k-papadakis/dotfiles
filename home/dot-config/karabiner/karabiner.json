@@ -205,7 +205,7 @@
                   {
                     "software_function": {
                       "open_application": {
-                        "file_path": "/Applications/Alacritty.app"
+                        "file_path": "/Applications/kitty.app"
                       }
                     }
                   }
