@@ -18,7 +18,7 @@ function set_terminal_title() {
 
   if [[ -n "$1" ]]; then
     # When a process is running, show the command and the current directory
-    print -Pn "\e]0;$directory | $1\a"
+    print -Pn "\e]0;$directory | ${1%% *}\a"
   else
     # Default title showing only the current directory
     print -Pn "\e]0;$directory\a"
