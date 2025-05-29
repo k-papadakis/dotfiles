@@ -5,3 +5,5 @@ home/dot-config/zsh/.zfunc/_*
 home/dot-config/tmux/plugins
 home/dot-config/btop/btop.log
 home/dot-config/zsh/.zcompdump
+home/dot-config/kitty/current-theme.conf
+*.bak
