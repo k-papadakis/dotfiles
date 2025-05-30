@@ -1,0 +1,47 @@
+shared:
+  code: &code
+    - kitty
+    - org.kde.konsole
+    - Alacritty
+    - Code
+  timeout_milliseconds: &timeout_millisecond 200
+  windows_devices: &windows_devices
+    - ITE Tech. Inc. ITE Device(8910) Keyboard
+    - AT Translated Set 2 keyboard
+
+modmap:
+  - name: Control
+    remap:
+      CapsLock:
+        held: Control_L
+        alone: Esc
+        timeout_milliseconds: *timeout_millisecond
+      BackSpace:
+        held: Control_R
+        alone: BackSpace
+        timeout_milliseconds: *timeout_millisecond
+      Esc: CapsLock
+      Control_L:
+        held: Control_L
+        alone: [Alt_L, Shift_L]
+
+  - name: Windows
+    device:
+      only: *windows_devices
+    remap:
+      WIN_L: ALT_L
+      ALT_L: WIN_L
+      ALT_R: WIN_R
+      CTRL_R: ALT_R
+
+keymap:
+  - name: Emacs binding
+    application:
+      not: *code
+    remap:
+      C-p: up
+      C-n: down
+      C-w: C-backspace
+      C-h: backspace
+      C-u: [C-a, backspace]
+      C-m: enter
