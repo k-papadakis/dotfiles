@@ -27,6 +27,8 @@ else
 fi
 export EDITOR="${VISUAL}"
 export LESS="-i"
+export LESSUTFCHARDEF="e000-f8ff:p,f0001-fffff:p"  # nerd font symbols
+
 # Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/theme-and-appearance.zsh
 # Sets color variable such as $fg, $bg, $color and $reset_color
 autoload -U colors && colors
