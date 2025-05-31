@@ -1,12 +1,16 @@
+# TODO: Use consistent naming for keys
 shared:
   code: &code
     - kitty
     - org.kde.konsole
     - Alacritty
     - Code
+  terminal: &terminal
+    - kitty
+    - org.kde.konsole
+    - Alacritty
   timeout_milliseconds: &timeout_millisecond 200
   windows_devices: &windows_devices
-    - ITE Tech. Inc. ITE Device(8910) Keyboard
     - AT Translated Set 2 keyboard
 
 modmap:
@@ -21,9 +25,6 @@ modmap:
         alone: BackSpace
         timeout_milliseconds: *timeout_millisecond
       Esc: CapsLock
-      Control_L:
-        held: Control_L
-        alone: [Alt_L, Shift_L]
 
   - name: Windows
     device:
@@ -35,7 +36,7 @@ modmap:
       CTRL_R: ALT_R
 
 keymap:
-  - name: Emacs binding
+  - name: Non-code applications
     application:
       not: *code
     remap:
@@ -43,5 +44,29 @@ keymap:
       C-n: down
       C-w: C-backspace
       C-h: backspace
-      C-u: [C-a, backspace]
+      C-u: C-Shift-backspace
       C-m: enter
+      C-f: right
+      C-b: left
+      M-f: C-right
+      M-b: C-left
+      C-c: Super-c
+      C-v: Super-v
+      # map the originals to super
+      Super-p: C-p
+      Super-n: C-n
+      Super-w: C-w
+      Super-h: C-h
+      Super-u: C-u
+      Super-m: C-m
+      Super-f: C-f
+      Super-b: C-b
+      Super-c: C-c
+      Super-v: C-v
+
+  - name: Terminal applications
+    application:
+      only: *terminal
+    remap:
+      Super-c: C-Shift-c
+      Super-v: C-Shift-v
