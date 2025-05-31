@@ -9,6 +9,7 @@ alias lzd='lazydocker'
 alias batman='bat --language=man --style=plain --paging=always'
 alias pip='uv pip'
 alias pipx='uv tool'
+alias icat="kitten icat"
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
