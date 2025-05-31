@@ -9,7 +9,7 @@ shared:
     - kitty
     - org.kde.konsole
     - Alacritty
-  timeout_milliseconds: &timeout_millisecond 200
+  alone_timeout_millis: &alone_timeout_millis 200
   windows_devices: &windows_devices
     - ITE Tech. Inc. ITE Device(8910) Keyboard
 
@@ -19,11 +19,11 @@ modmap:
       CapsLock:
         held: Control_L
         alone: Esc
-        timeout_milliseconds: *timeout_millisecond
+        alone_timeout_millis: *alone_timeout_millis
       BackSpace:
         held: Control_R
         alone: BackSpace
-        timeout_milliseconds: *timeout_millisecond
+        alone_timeout_millis: *alone_timeout_millis
       Esc: CapsLock
 
   - name: Windows
