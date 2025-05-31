@@ -11,7 +11,7 @@ shared:
     - Alacritty
   timeout_milliseconds: &timeout_millisecond 200
   windows_devices: &windows_devices
-    - AT Translated Set 2 keyboard
+    - ITE Tech. Inc. ITE Device(8910) Keyboard
 
 modmap:
   - name: Control
@@ -39,6 +39,7 @@ keymap:
   - name: Non-code applications
     application:
       not: *code
+    exact_match: true
     remap:
       C-p: up
       C-n: down
@@ -48,10 +49,10 @@ keymap:
       C-m: enter
       C-f: right
       C-b: left
-      M-f: C-right
-      M-b: C-left
       C-c: Super-c
       C-v: Super-v
+      M-f: C-right
+      M-b: C-left
       # map the originals to super
       Super-p: C-p
       Super-n: C-n
@@ -67,6 +68,7 @@ keymap:
   - name: Terminal applications
     application:
       only: *terminal
+    exact_match: true
     remap:
       Super-c: C-Shift-c
       Super-v: C-Shift-v
