@@ -45,7 +45,8 @@ keymap:
       C-n: down
       C-w: C-backspace
       C-h: backspace
-      C-u: C-Shift-backspace
+      C-u: [Shift-Home, Backspace]
+      C-k: [Shift-End, Backspace]
       C-m: enter
       C-f: right
       C-b: left
