@@ -53,7 +53,8 @@ keymap:
       C-c: Super-c
       C-v: Super-v
       C-x: Super-x
-      C-a: Super-a
+      C-a: Home
+      c-e: End
       C-s: Super-s
       C-z: Super-z
       C-Shift-z: Super-Shift-z
