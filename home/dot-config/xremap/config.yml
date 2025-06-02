@@ -57,6 +57,8 @@ keymap:
       c-e: End
       C-s: Super-s
       C-z: Super-z
+      C-equal: Super-equal
+      C-minus: Super-minus
       C-Shift-z: Super-Shift-z
       M-f: C-right
       M-b: C-left
@@ -75,6 +77,8 @@ keymap:
       Super-a: C-a
       Super-s: C-s
       Super-z: C-z
+      Super-equal: C-equal
+      Super-minus: C-minus
       Super-Shift-z: C-Shift-z
 
   - name: Terminal applications
