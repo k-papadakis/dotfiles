@@ -6,6 +6,7 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
 fpath+=${ZDOTDIR}/.zfunc
 
+export HOMEBREW_BUNDLE_DUMP_NO_VSCODE=1
 export HOMEBREW_BUNDLE_INSTALL_CLEANUP=1
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 # export BAT_THEME="Catppuccin Macchiato"
