@@ -3,7 +3,11 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
-export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.cargo/bin"
+path+=(
+  "${HOME}/.local/bin"
+  "${HOME}/.cargo/bin"
+  "${HOME}/.local/share/coursier/bin"
+)
 
 fpath+=${ZDOTDIR}/.zfunc
 
