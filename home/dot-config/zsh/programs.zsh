@@ -1,3 +1,43 @@
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
+
+# export BAT_THEME="Catppuccin Macchiato"
+# export BAT_THEME="gruvbox-material-dark"
+export BAT_THEME="kanagawa"
+
+export MANPAGER='nvim +Man!'
+
+export LESS="-i"
+export LESSUTFCHARDEF="e000-f8ff:p,f0001-fffff:p"  # nerd font symbols
+
+# Default Editor
+if [[ -n ${SSH_CONNECTION} ]]; then
+  export VISUAL=vim
+else
+  export VISUAL=nvim
+fi
+export EDITOR="${VISUAL}"
+
+# Prevent Podman from using the OCI format
+export BUILDAH_FORMAT=docker
+
+# Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/theme-and-appearance.zsh
+# Sets color variable such as $fg, $bg, $color and $reset_color
+autoload -U colors && colors
+# Default coloring for BSD-based ls
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+# Default coloring for GNU-based ls
+if [[ -z "$LS_COLORS" ]]; then
+  # Define LS_COLORS via dircolors if available. Otherwise, set a default
+  # equivalent to LSCOLORS (generated via https://geoff.greer.fm/lscolors)
+  if (( $+commands[dircolors] )); then
+    [[ -f "$HOME/.dircolors" ]] \
+      && source <(dircolors -b "$HOME/.dircolors") \
+      || source <(dircolors -b)
+  else
+    export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+  fi
+fi
+
 eval "$(starship init zsh)"
 eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"
