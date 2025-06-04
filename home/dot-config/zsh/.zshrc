@@ -1,3 +1,4 @@
+source ${ZDOTDIR}/env.zsh
 source ${ZDOTDIR}/opts.zsh
 source ${ZDOTDIR}/keybindings.zsh
 source ${ZDOTDIR}/completions.zsh
