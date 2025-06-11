@@ -3,7 +3,6 @@
 # Taps should be at the top of the Brewfile.
 tap "coursier/formulas"
 tap "databricks/tap"
-tap "homebrew/bundle"
 
 brew "ast-grep"
 brew "azure-cli"
