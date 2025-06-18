@@ -267,6 +267,30 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Open VS Code by cmd+opt+ctrl+shift+c",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": ["command", "option", "control", "shift"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "software_function": {
+                      "open_application": {
+                        "file_path": "/Applications/Visual Studio Code.app"
+                      }
+                    }
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
