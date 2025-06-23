@@ -12,17 +12,6 @@ return {
     { "<leader>ap", "<cmd>CodeCompanionActions<cr>", mode = { "n", "v" }, desc = "CodeCompanionActions ([p]rompts)" },
   },
   opts = {
-    adapters = {
-      copilot = function()
-        return require("codecompanion.adapters").extend("copilot", {
-          schema = {
-            model = {
-              default = "claude-3.7-sonnet",
-            },
-          },
-        })
-      end,
-    },
     strategies = {
       chat = {
         keymaps = {
