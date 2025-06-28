@@ -25,6 +25,11 @@ return {
           },
         },
       },
+      sources = {
+        files = {
+          hidden = true,
+        },
+      },
     },
     dashboard = {
       preset = {
