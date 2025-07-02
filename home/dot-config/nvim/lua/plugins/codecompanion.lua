@@ -3,6 +3,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "ravitemer/codecompanion-history.nvim",
   },
   keys = {
     { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
@@ -12,6 +13,11 @@ return {
     { "<leader>ap", "<cmd>CodeCompanionActions<cr>", mode = { "n", "v" }, desc = "CodeCompanionActions ([p]rompts)" },
   },
   opts = {
+    extensions = {
+      history = {
+        expiration_days = 14,
+      },
+    },
     strategies = {
       chat = {
         keymaps = {
