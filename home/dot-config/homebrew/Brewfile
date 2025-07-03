@@ -3,6 +3,7 @@
 # Taps should be at the top of the Brewfile.
 tap "coursier/formulas"
 tap "databricks/tap"
+tap "sst/tap"
 
 brew "ast-grep"
 brew "azure-cli"
@@ -51,6 +52,7 @@ brew "sd"
 brew "shellcheck"
 brew "shfmt"
 brew "sponge"
+brew "sst/tap/opencode"
 brew "starship"
 brew "stow"
 brew "terraform-docs"
