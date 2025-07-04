@@ -87,6 +87,7 @@
                       "^net.kovidgoyal.kitty$",
                       "^com.googlecode.iterm2$",
                       "^com.microsoft.VSCode$",
+                      "^com.todesktop.230313mzl4w4u92$",
                       "^com.jetbrains.*$"
                     ]
                   }
@@ -119,6 +120,7 @@
                       "^net.kovidgoyal.kitty$",
                       "^com.googlecode.iterm2$",
                       "^com.microsoft.VSCode$",
+                      "^com.todesktop.230313mzl4w4u92$",
                       "^com.jetbrains.*$"
                     ]
                   }
@@ -154,6 +156,7 @@
                       "^net.kovidgoyal.kitty$",
                       "^com.googlecode.iterm2$",
                       "^com.microsoft.VSCode$",
+                      "^com.todesktop.230313mzl4w4u92$",
                       "^com.jetbrains.*$"
                     ]
                   }
@@ -189,6 +192,7 @@
                       "^net.kovidgoyal.kitty$",
                       "^com.googlecode.iterm2$",
                       "^com.microsoft.VSCode$",
+                      "^com.todesktop.230313mzl4w4u92$",
                       "^com.jetbrains.*$"
                     ]
                   }
