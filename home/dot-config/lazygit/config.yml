@@ -4,7 +4,6 @@ git:
     pager: delta --paging=never
   autoForwardBranches: allBranches
   overrideGpg: true
-services:
-  gitlab.kaizengaming.eu: gitlab:gitlab.kaizengaming.eu
+
 gui:
   nerdFontsVersion: "3"
