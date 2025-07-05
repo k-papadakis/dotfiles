@@ -7,3 +7,4 @@ git:
 
 gui:
   nerdFontsVersion: "3"
+  useHunkModeInStagingView: true
