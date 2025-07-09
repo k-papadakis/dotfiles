@@ -273,7 +273,7 @@
             ]
           },
           {
-            "description": "Open VS Code by cmd+opt+ctrl+shift+c",
+            "description": "Open Cursor by cmd+opt+ctrl+shift+c",
             "manipulators": [
               {
                 "from": {
@@ -287,7 +287,7 @@
                   {
                     "software_function": {
                       "open_application": {
-                        "file_path": "/Applications/Visual Studio Code.app"
+                        "file_path": "/Applications/Cursor.app"
                       }
                     }
                   }
