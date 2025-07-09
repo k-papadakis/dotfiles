@@ -1,10 +1,12 @@
 # vim: ft=ruby
 
 # Taps should be at the top of the Brewfile.
+tap "atlassian-labs/acli"
 tap "coursier/formulas"
 tap "databricks/tap"
 tap "sst/tap"
 
+brew "acli"
 brew "ast-grep"
 brew "azure-cli"
 brew "bashdb"
