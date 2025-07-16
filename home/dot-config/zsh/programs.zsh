@@ -15,7 +15,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain'"
 fi
 
-export LESS="-i"
+export LESS="i"
 export LESSUTFCHARDEF="e000-f8ff:p,f0001-fffff:p"  # nerd font symbols
 
 # Default Editor

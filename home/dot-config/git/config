@@ -10,9 +10,9 @@
     path = "~/.config/git/themes"
 
 [core]
-    pager = delta
-[interactive]
-    diffFilter = delta --color-only
+    # If LESS is not set, git sets LESS=FRX, otherwise it does nothing.
+    # See the core.pager section of the git-config docs for more info.
+    pager = less -FRX
 [delta]
     # features = catppuccin-macchiato
     # syntax-theme = gruvbox-material-dark
