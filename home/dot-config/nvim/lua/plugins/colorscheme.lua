@@ -12,6 +12,16 @@ return {
   {
     "Mofiqul/vscode.nvim",
     lazy = true,
+    init = function()
+      local group = vim.api.nvim_create_augroup("custom_highlights_vscode", { clear = true })
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        group = group,
+        pattern = "vscode",
+        callback = function()
+          vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true })
+        end,
+      })
+    end,
   },
   {
     "rebelot/kanagawa.nvim",
