@@ -22,6 +22,16 @@ return {
         end,
       })
     end,
+    opts = function(_, opts)
+      local c = require("vscode.colors").get_colors()
+      opts.group_overrides = {
+        -- Color input parameters differently
+        ["@variable.parameter"] = { fg = c.vscAccentBlue },
+        ["@variable.parameter.reference"] = { fg = c.vscAccentBlue },
+        ["@lsp.type.parameter"] = { link = "@variable.parameter" },
+      }
+      return opts
+    end,
   },
   {
     "rebelot/kanagawa.nvim",
