@@ -14,9 +14,6 @@
     # See the core.pager section of the git-config docs for more info.
     pager = less -FRX
 [delta]
-    # features = catppuccin-macchiato
-    # syntax-theme = gruvbox-material-dark
-    syntax-theme = kanagawa
     navigate = true
 [merge]
     conflictstyle = zdiff3

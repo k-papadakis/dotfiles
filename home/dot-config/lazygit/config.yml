@@ -1,8 +1,12 @@
 git:
   paging:
     colorArg: always
-    pager: delta --paging=never
-  autoForwardBranches: allBranches
+    pager: |
+      if [ -n "$NVIM" ]; then
+          delta --syntax-theme="Visual Studio Dark+" --paging=never
+      else
+          delta --paging=never
+      fi
   overrideGpg: true
 
 gui:

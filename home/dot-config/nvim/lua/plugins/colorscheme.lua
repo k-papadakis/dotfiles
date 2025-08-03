@@ -69,8 +69,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
-      -- colorscheme = "gruvbox-material",
+      colorscheme = "vscode",
     },
   },
 }
