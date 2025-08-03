@@ -1,13 +1,16 @@
 return {
   "coder/claudecode.nvim",
   -- HACK: The terminal buffer opened by this plugin does not respect hjkl
-  -- init = function()
-  --   vim.api.nvim_create_autocmd("TermOpen", {
-  --     callback = function()
-  --       vim.keymap.set("t", "<C-h>", "<C-h>", { buffer = true, noremap = true })
-  --     end,
-  --   })
-  -- end,
+  init = function()
+    vim.api.nvim_create_autocmd("TermOpen", {
+      callback = function()
+        vim.keymap.set("t", "<C-h>", "<C-h>", { buffer = true, noremap = true })
+        vim.keymap.set("t", "<C-j>", "<C-j>", { buffer = true, noremap = true })
+        vim.keymap.set("t", "<C-k>", "<C-k>", { buffer = true, noremap = true })
+        vim.keymap.set("t", "<C-l>", "<C-l>", { buffer = true, noremap = true })
+      end,
+    })
+  end,
   dependencies = { "folke/snacks.nvim" },
   config = true,
   keys = {
