@@ -1,13 +1,19 @@
 return {
   "coder/claudecode.nvim",
-  -- HACK: The terminal buffer opened by this plugin does not respect hjkl
   init = function()
+    -- Preserve terminal navigation keys in Claude Code terminals
+    -- Prevents C-hjkl from being intercepted for window navigation
+    local group = vim.api.nvim_create_augroup("ClaudeCodeTerminal", { clear = true })
     vim.api.nvim_create_autocmd("TermOpen", {
-      callback = function()
-        vim.keymap.set("t", "<C-h>", "<C-h>", { buffer = true, noremap = true })
-        vim.keymap.set("t", "<C-j>", "<C-j>", { buffer = true, noremap = true })
-        vim.keymap.set("t", "<C-k>", "<C-k>", { buffer = true, noremap = true })
-        vim.keymap.set("t", "<C-l>", "<C-l>", { buffer = true, noremap = true })
+      group = group,
+      callback = function(ev)
+        local bufname = vim.api.nvim_buf_get_name(ev.buf)
+        if bufname:match(":claude$") then
+          vim.keymap.set("t", "<C-h>", "<C-h>", { buffer = ev.buf, noremap = true })
+          vim.keymap.set("t", "<C-j>", "<C-j>", { buffer = ev.buf, noremap = true })
+          vim.keymap.set("t", "<C-k>", "<C-k>", { buffer = ev.buf, noremap = true })
+          vim.keymap.set("t", "<C-l>", "<C-l>", { buffer = ev.buf, noremap = true })
+        end
       end,
     })
   end,
