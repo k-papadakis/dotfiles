@@ -5,7 +5,9 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 
 # export BAT_THEME="Catppuccin Macchiato"
 # export BAT_THEME="gruvbox-material-dark"
-export BAT_THEME="kanagawa"
+# export BAT_THEME="kanagawa"
+# export BAT_THEME="Visual Studio Dark+"
+export BAT_THEME="tokyonight_night"
 
 # The colors are messed up when using bat for manpages on linux.
 # Nvim is great for manpaging, although a bit slow.
@@ -52,9 +54,10 @@ eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
-# source "${ZDOTDIR}/themes/fzf/catppuccin-macchiato.sh"
+# source "${ZDOTDIR}/themes/fzf/catppuccin/catppuccin-macchiato.sh"
 # source "${ZDOTDIR}/themes/fzf/tinted-fzf/sh/base16-gruvbox-material-dark-medium.sh"
-source "${ZDOTDIR}/themes/fzf/tinted-fzf/sh/base16-kanagawa.sh"
+# source "${ZDOTDIR}/themes/fzf/tinted-fzf/sh/base16-kanagawa.sh"
+source "${ZDOTDIR}/themes/fzf/tokyonight/tokyonight_night.sh"
 source <(fzf --zsh)
 source "${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # source "${ZDOTDIR}/themes/zsh-syntax-highlighting/catppuccin/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh"
