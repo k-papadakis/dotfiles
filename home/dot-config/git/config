@@ -45,3 +45,5 @@
   cmd = nvim -c "DiffviewOpen"
 [mergetool]
   prompt = false
+[init]
+  defaultBranch = main
