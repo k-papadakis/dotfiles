@@ -10,6 +10,15 @@ return {
     },
   },
   {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = {
+      on_colors = function(colors)
+        colors.border = colors.orange
+      end,
+    }
+  },
+  {
     "Mofiqul/vscode.nvim",
     lazy = true,
     init = function()
