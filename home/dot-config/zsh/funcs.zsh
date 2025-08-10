@@ -1,2 +1,2 @@
 # Use `autoload -U` to avoid expanding aliases
-autoload mkcd
+autoload mkcd y
