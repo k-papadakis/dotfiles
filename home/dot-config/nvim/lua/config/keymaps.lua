@@ -16,3 +16,6 @@ end, { desc = "Down", expr = true, silent = true })
 map({ "n", "x" }, "<Up>", function()
   return vim.v.count > 0 and "m'" .. vim.v.count .. "k" or "gk"
 end, { desc = "Down", expr = true, silent = true })
+
+-- Escape terminal mode with 'jk'
+map("t", "jk", [[<C-\><C-n>]], { noremap = true })
