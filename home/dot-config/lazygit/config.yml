@@ -3,7 +3,7 @@ git:
     colorArg: always
     pager: |
       if [ -n "$NVIM" ]; then
-          delta --syntax-theme="Visual Studio Dark+" --paging=never
+          delta --syntax-theme="tokyonight_night" --paging=never
       else
           delta --paging=never
       fi
