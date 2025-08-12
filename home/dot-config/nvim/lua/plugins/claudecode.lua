@@ -21,9 +21,4 @@ return {
     { "<leader>ay", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
     { "<leader>an", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
   },
-  opts = {
-    terminal = {
-      provider = "native",
-    },
-  },
 }

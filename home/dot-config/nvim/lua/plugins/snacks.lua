@@ -15,6 +15,25 @@ return {
     },
   },
   opts = {
+    terminal = {
+      win = {
+        keys = {
+          -- Remove terminal mode remaps
+          nav_h = false,
+          nav_j = false,
+          nav_k = false,
+          nav_l = false,
+        },
+      },
+    },
+    styles = {
+      terminal = {
+        keys = {
+          -- Remove double Escape terminal mapping, use jk instead
+          term_normal = false,
+        },
+      },
+    },
     picker = {
       hidden = true,
       win = {

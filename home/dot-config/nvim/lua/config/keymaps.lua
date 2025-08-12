@@ -18,4 +18,6 @@ map({ "n", "x" }, "<Up>", function()
 end, { desc = "Down", expr = true, silent = true })
 
 -- Escape terminal mode with 'jk'
-map("t", "jk", [[<C-\><C-n>]], { noremap = true })
+map("t", "jk", function()
+  vim.cmd("stopinsert")
+end)
