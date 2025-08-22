@@ -13,6 +13,7 @@ brew "azure-cli"
 brew "bashdb"
 brew "bat"
 brew "btop"
+brew "checkbashisms"
 brew "cloc"
 brew "cmatrix"
 brew "coreutils" if OS.mac?
