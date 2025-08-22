@@ -5,11 +5,11 @@
         "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 },
         "rules": [
           {
-            "description": "lctrl: {tap: esc, combine: lctrl}",
+            "description": "caps_lock: {tap: esc, combine: lctrl}",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "left_control",
+                  "key_code": "caps_lock",
                   "modifiers": { "optional": ["any"] }
                 },
                 "to": [
@@ -19,6 +19,19 @@
                   }
                 ],
                 "to_if_alone": [{ "key_code": "escape" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "escape -> caps_lock",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [{ "key_code": "caps_lock" }],
                 "type": "basic"
               }
             ]
@@ -452,20 +465,7 @@
       ],
       "name": "Default profile",
       "selected": true,
-      "simple_modifications": [
-        {
-          "from": { "key_code": "caps_lock" },
-          "to": [{ "key_code": "left_control" }]
-        },
-        {
-          "from": { "key_code": "escape" },
-          "to": [{ "key_code": "vk_none" }]
-        },
-        {
-          "from": { "key_code": "left_control" },
-          "to": [{ "key_code": "caps_lock" }]
-        }
-      ],
+      "simple_modifications": [],
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     }
   ]
