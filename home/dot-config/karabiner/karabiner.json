@@ -2,7 +2,7 @@
   "profiles": [
     {
       "complex_modifications": {
-        "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 },
+        "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 },
         "rules": [
           {
             "description": "lctrl: {tap: esc, combine: lctrl}",
@@ -24,11 +24,11 @@
             ]
           },
           {
-            "description": "backspace: {tap: backspace, combine: rctrl}",
+            "description": ";: {tap: ;, combine: rctrl}. Alternatively, see https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to-if-held-down/#more-advanced-example",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "delete_or_backspace",
+                  "key_code": "semicolon",
                   "modifiers": { "optional": ["any"] }
                 },
                 "to": [
@@ -37,7 +37,7 @@
                     "lazy": true
                   }
                 ],
-                "to_if_alone": [{ "key_code": "delete_or_backspace" }],
+                "to_if_alone": [{ "key_code": "semicolon" }],
                 "type": "basic"
               }
             ]
