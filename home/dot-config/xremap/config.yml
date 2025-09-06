@@ -56,6 +56,7 @@ keymap:
       C-a: Home
       c-e: End
       C-s: Super-s
+      C-t: Super-t
       C-z: Super-z
       C-equal: Super-equal
       C-minus: Super-minus
@@ -76,6 +77,7 @@ keymap:
       Super-x: C-x
       Super-a: C-a
       Super-s: C-s
+      Super-t: C-t
       Super-z: C-z
       Super-equal: C-equal
       Super-minus: C-minus
