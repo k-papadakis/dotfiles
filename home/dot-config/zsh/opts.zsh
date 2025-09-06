@@ -8,7 +8,6 @@ SAVEHIST=10000
 SHELL_SESSIONS_DISABLE=1
 
 unsetopt LIST_BEEP
-setopt CORRECT_ALL
 setopt INTERACTIVE_COMMENTS
 
 # History command configuration

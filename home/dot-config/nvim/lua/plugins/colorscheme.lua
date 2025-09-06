@@ -10,8 +10,37 @@ return {
     },
   },
   {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = {
+      on_colors = function(colors)
+        colors.border = colors.orange
+      end,
+    }
+  },
+  {
     "Mofiqul/vscode.nvim",
     lazy = true,
+    init = function()
+      local group = vim.api.nvim_create_augroup("custom_highlights_vscode", { clear = true })
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        group = group,
+        pattern = "vscode",
+        callback = function()
+          vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true })
+        end,
+      })
+    end,
+    opts = function(_, opts)
+      local c = require("vscode.colors").get_colors()
+      opts.group_overrides = {
+        -- Color input parameters differently
+        ["@variable.parameter"] = { fg = c.vscAccentBlue },
+        ["@variable.parameter.reference"] = { fg = c.vscAccentBlue },
+        ["@lsp.type.parameter"] = { link = "@variable.parameter" },
+      }
+      return opts
+    end,
   },
   {
     "rebelot/kanagawa.nvim",
@@ -49,8 +78,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
-      -- colorscheme = "gruvbox-material",
+      colorscheme = "tokyonight-night",
     },
   },
 }

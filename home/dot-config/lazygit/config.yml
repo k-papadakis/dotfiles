@@ -1,10 +1,14 @@
 git:
   paging:
     colorArg: always
-    pager: delta --paging=never
-  autoForwardBranches: allBranches
+    pager: |
+      if [ -n "$NVIM" ]; then
+          delta --syntax-theme="tokyonight_night" --paging=never
+      else
+          delta --paging=never
+      fi
   overrideGpg: true
-services:
-  gitlab.kaizengaming.eu: gitlab:gitlab.kaizengaming.eu
+
 gui:
   nerdFontsVersion: "3"
+  useHunkModeInStagingView: true
