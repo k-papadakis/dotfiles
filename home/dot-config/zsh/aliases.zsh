@@ -1,4 +1,5 @@
 alias v='nvim'
+alias docker='podman'
 alias cd='z'
 alias ls='eza --color=auto --icons=auto'
 alias tree='eza --tree --color=auto --icons=auto'
