@@ -4,7 +4,7 @@ shared:
     - kitty
     - org.kde.konsole
     - Alacritty
-    - Code
+    - code
   terminal: &terminal
     - kitty
     - org.kde.konsole
@@ -20,9 +20,9 @@ modmap:
         held: Control_L
         alone: Esc
         alone_timeout_millis: *alone_timeout_millis
-      BackSpace:
+      Semicolon:
         held: Control_R
-        alone: BackSpace
+        alone: Semicolon
         alone_timeout_millis: *alone_timeout_millis
       Esc: CapsLock
 
