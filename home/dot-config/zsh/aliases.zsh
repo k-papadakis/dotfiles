@@ -1,6 +1,3 @@
-# HACK: if brew self updates then it fails to discover the Brewfile, so we run it again
-alias bb='brew bundle --global || brew bundle --global'
-
 alias v='nvim'
 alias docker='podman'
 alias cd='z'
