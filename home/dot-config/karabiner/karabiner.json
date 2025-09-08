@@ -2,7 +2,6 @@
   "profiles": [
     {
       "complex_modifications": {
-        "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 },
         "rules": [
           {
             "description": "caps_lock: {tap: esc, combine: lctrl}",
@@ -19,7 +18,8 @@
                   }
                 ],
                 "to_if_alone": [{ "key_code": "escape" }],
-                "type": "basic"
+                "type": "basic",
+                "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 }
               }
             ]
           },
@@ -51,7 +51,8 @@
                   }
                 ],
                 "to_if_alone": [{ "key_code": "semicolon" }],
-                "type": "basic"
+                "type": "basic",
+                "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 }
               }
             ]
           },
@@ -71,7 +72,8 @@
                   ]
                 },
                 "to_if_alone": [{ "key_code": "return_or_enter" }],
-                "type": "basic"
+                "type": "basic",
+                "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 }
               }
             ]
           },
