@@ -64,7 +64,7 @@ keymap:
       M-f: C-right
       M-b: C-left
       # map the originals to super
-      Super-p: C-p
+      # Super-p: C-p  # display layout picker
       Super-n: C-n
       Super-w: C-w
       Super-h: C-h
