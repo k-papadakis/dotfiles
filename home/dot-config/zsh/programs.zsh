@@ -9,6 +9,10 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 # export BAT_THEME="Visual Studio Dark+"
 export BAT_THEME="tokyonight_night"
 
+
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # The colors are messed up when using bat for manpages on linux.
 # Nvim is great for manpaging, although a bit slow.
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
