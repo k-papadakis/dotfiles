@@ -54,7 +54,6 @@ if [[ -z "$LS_COLORS" ]]; then
 fi
 
 eval "$(starship init zsh)"
-eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
