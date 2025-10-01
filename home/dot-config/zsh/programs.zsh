@@ -8,6 +8,9 @@ export BAT_THEME="tokyonight_night"
 
 export MANPAGER='nvim +Man!'
 
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 export LESS="i"
 export LESSUTFCHARDEF="e000-f8ff:p,f0001-fffff:p"  # nerd font symbols
 
@@ -41,7 +44,6 @@ if [[ -z "$LS_COLORS" ]]; then
 fi
 
 eval "$(starship init zsh)"
-eval "$(gh copilot alias -- zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 

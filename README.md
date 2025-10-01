@@ -34,7 +34,6 @@ rustup completions zsh >~/.config/zsh/.zfunc/_rustup
 rustup completions zsh cargo >~/.config/zsh/.zfunc/_cargo
 
 gh auth login
-gh extension install github/gh-copilot
 ```
 
 ### Alacritty fix on MacOS
