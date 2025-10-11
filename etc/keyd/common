@@ -1,8 +1,0 @@
-# Maps capslock to escape when pressed and control when held.
-capslock = overload(control, esc)
-
-# Remaps the escape key to capslock
-esc = capslock
-
-# Maps backspace to backspace when pressed and control when held.
-backspace = overload(control, backspace)
