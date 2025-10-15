@@ -1,0 +1,18 @@
+return {
+  "folke/sidekick.nvim",
+  opts = {
+    cli = {
+      win = {
+        keys = {
+          -- Disable the terminal window's <c-.> so LazyVim's focus() works everywhere
+          hide_ctrl_dot = false,
+          -- Disable <c-hjkl> navigation to avoid conflicts with shell keybinds
+          nav_left = false,
+          nav_down = false,
+          nav_up = false,
+          nav_right = false,
+        },
+      },
+    },
+  },
+}
