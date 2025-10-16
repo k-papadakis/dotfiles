@@ -1,6 +1,10 @@
 # HACK: if brew self updates then it fails to discover the Brewfile, so we run it again
 alias bb='brew bundle --global || brew bundle --global'
 
+# TODO: Remove this when a relevant config option is introduced
+# See also https://github.com/github/copilot-cli/issues/30
+alias copilot='copilot --disable-mcp-server github-mcp-server'
+
 alias v='nvim'
 alias docker='podman'
 alias cd='z'
