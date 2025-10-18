@@ -21,3 +21,15 @@ end, { desc = "Down", expr = true, silent = true })
 map("t", "jk", function()
   vim.cmd("stopinsert")
 end)
+
+-- https://github.com/LazyVim/LazyVim/discussions/6587#discussioncomment-14598232
+Snacks.toggle({
+  name = "AI suggestions",
+  get = function()
+    return vim.g.sidekick_nes ~= false
+  end,
+  set = function(state)
+    vim.g.sidekick_nes = state
+    vim.lsp.inline_completion.enable(state)
+  end,
+}):map("<leader>aT")
