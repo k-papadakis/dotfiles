@@ -1,3 +1,7 @@
+# TODO: Remove this when a relevant config option is introduced
+# See also https://github.com/github/copilot-cli/issues/30
+alias copilot='copilot --disable-mcp-server github-mcp-server'
+
 alias v='nvim'
 alias cd='z'
 alias ls='eza --color=auto --icons=auto'
@@ -10,7 +14,8 @@ alias docker='sudo docker'
 alias batman='bat --language=man --style=plain --paging=always'
 alias pip='uv pip'
 alias pipx='uv tool'
-alias icat="kitten icat"
+alias icat='kitten icat'
+alias dab='databricks bundle'
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
