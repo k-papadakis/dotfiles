@@ -1,5 +1,15 @@
 return {
   "folke/sidekick.nvim",
+  keys = {
+    {
+      "<c-.>",
+      function()
+        require("sidekick.cli").focus()
+      end,
+      desc = "Sidekick Focus",
+      mode = { "n", "t", "i", "x" },
+    },
+  },
   opts = {
     cli = {
       win = {
