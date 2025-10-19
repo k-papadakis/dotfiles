@@ -85,7 +85,6 @@ brew "zsh-syntax-highlighting"
 
 cask "alacritty"
 cask "basictex"
-cask "cursor"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
