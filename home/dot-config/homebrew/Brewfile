@@ -30,6 +30,7 @@ brew "gh"
 brew "ghostscript"
 brew "git-delta"
 brew "git-filter-repo"
+brew "gitleaks"
 brew "glab"
 brew "gnu-sed" if OS.mac?
 brew "gnupg"
