@@ -1,14 +1,13 @@
 git:
-  paging:
-    colorArg: always
-    pager: |
-      if [ -n "$NVIM" ]; then
-          delta --syntax-theme="tokyonight_night" --paging=never
-      else
-          delta --paging=never
-      fi
+  pagers:
+    - colorArg: always
+      pager: |
+        if [ -n "$NVIM" ]; then
+            delta --syntax-theme="tokyonight_night" --paging=never
+        else
+            delta --paging=never
+        fi
   overrideGpg: true
-
 gui:
   nerdFontsVersion: "3"
   useHunkModeInStagingView: true
