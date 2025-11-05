@@ -5,6 +5,7 @@ alias bb='brew bundle --global || brew bundle --global'
 # See also https://github.com/github/copilot-cli/issues/30
 alias copilot='copilot --disable-mcp-server github-mcp-server'
 
+alias ur='uv run'
 alias v='nvim'
 alias docker='podman'
 alias cd='z'
