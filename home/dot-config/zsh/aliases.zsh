@@ -2,6 +2,8 @@
 # See also https://github.com/github/copilot-cli/issues/30
 alias copilot='copilot --disable-mcp-server github-mcp-server'
 
+alias ur='uv run'
+alias cr='cargo run'
 alias v='nvim'
 alias cd='z'
 alias ls='eza --color=auto --icons=auto'
