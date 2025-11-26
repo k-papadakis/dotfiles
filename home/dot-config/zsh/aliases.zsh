@@ -3,8 +3,16 @@
 alias copilot='copilot --disable-mcp-server github-mcp-server'
 
 alias ur='uv run'
+alias urf='uv run ruff format'
+alias urc='uv run ruff check'
+alias urb='uv run basedpyright'
+alias urp='uv run pytest'
+alias urm='uv run mypy'
 alias cr='cargo run'
+
 alias v='nvim'
+alias oc='opencode'
+alias tf='terraform'
 alias cd='z'
 alias ls='eza --color=auto --icons=auto'
 alias tree='eza --tree --color=auto --icons=auto'
