@@ -12,11 +12,7 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = {
-      on_colors = function(colors)
-        colors.border = colors.orange
-      end,
-    }
+    opts = {},
   },
   {
     "Mofiqul/vscode.nvim",
@@ -78,7 +74,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-night",
+      colorscheme = "tokyonight-storm",
     },
   },
 }
