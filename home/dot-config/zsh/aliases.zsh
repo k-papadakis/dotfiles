@@ -14,7 +14,7 @@ alias urm='uv run mypy'
 alias cr='cargo run'
 
 alias v='nvim'
-alias oc='opencode'
+alias opc='opencode'
 alias docker='podman'
 alias tf='terraform'
 alias cd='z'
