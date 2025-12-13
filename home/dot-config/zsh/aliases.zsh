@@ -11,7 +11,7 @@ alias urm='uv run mypy'
 alias cr='cargo run'
 
 alias v='nvim'
-alias oc='opencode'
+alias opc='opencode'
 alias tf='terraform'
 alias cd='z'
 alias ls='eza --color=auto --icons=auto'
