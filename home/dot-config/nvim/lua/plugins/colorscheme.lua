@@ -12,7 +12,7 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = {},
+    opts = { style = "night" },
   },
   {
     "Mofiqul/vscode.nvim",
@@ -74,7 +74,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-storm",
+      colorscheme = "tokyonight",
     },
   },
 }
