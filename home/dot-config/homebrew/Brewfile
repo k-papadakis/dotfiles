@@ -3,6 +3,7 @@
 # Taps should be at the top of the Brewfile.
 
 tap "atlassian-labs/acli"
+tap "bufbuild/buf"
 tap "coursier/formulas"
 tap "databricks/tap"
 tap "sst/tap"
@@ -13,6 +14,7 @@ brew "azure-cli"
 brew "bashdb"
 brew "bat"
 brew "btop"
+brew "bufbuild/buf/buf"
 brew "chafa"
 brew "checkbashisms"
 brew "cloc"
