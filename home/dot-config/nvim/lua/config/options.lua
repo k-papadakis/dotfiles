@@ -11,3 +11,5 @@ vim.g.snacks_animate = false
 
 vim.opt.title = true
 vim.opt.titlestring = "%{fnamemodify('.', ':~:t')} - Nvim"
+
+vim.opt.colorcolumn = "81"
