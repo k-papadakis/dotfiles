@@ -13,6 +13,7 @@ end
 
 -- Creating the yaml.gitlab filetype for gitlab-ci-ls and yamlls
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  group = augroup("gitlab_ci_yaml"),
   pattern = { "*.gitlab-ci*.{yml,yaml}", "*/devops/*.{yml,yaml}" },
   callback = function()
     vim.bo.filetype = "yaml.gitlab"
@@ -22,6 +23,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 -- *.tftpl files as hcl files.
 -- It is not great, but it is better than nothing.
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  group = augroup("tftpl_as_hcl"),
   pattern = "*.tftpl",
   callback = function()
     vim.bo.filetype = "hcl"
@@ -30,6 +32,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 
 -- Open Terraform documentation URLs
 vim.api.nvim_create_autocmd("LspAttach", {
+  group = augroup("terraform_docs"),
   pattern = "*.tf",
   callback = function(event)
     local client = vim.lsp.get_client_by_id(event.data.client_id)
