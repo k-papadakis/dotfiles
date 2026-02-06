@@ -19,6 +19,7 @@ brew "chafa"
 brew "checkbashisms"
 brew "cloc"
 brew "cmatrix"
+brew "container" if OS.mac?
 brew "coreutils" if OS.mac?
 brew "coursier/formulas/coursier"
 brew "databricks/tap/databricks"
