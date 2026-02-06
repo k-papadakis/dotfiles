@@ -7,8 +7,13 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+local function augroup(name)
+  return vim.api.nvim_create_augroup("custom_" .. name, { clear = true })
+end
+
 -- Creating the yaml.gitlab filetype for gitlab-ci-ls and yamlls
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  group = augroup("gitlab_ci_yaml"),
   pattern = { "*.gitlab-ci*.{yml,yaml}", "*/devops/*.{yml,yaml}" },
   callback = function()
     vim.bo.filetype = "yaml.gitlab"
@@ -18,6 +23,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 -- *.tftpl files as hcl files.
 -- It is not great, but it is better than nothing.
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  group = augroup("tftpl_as_hcl"),
   pattern = "*.tftpl",
   callback = function()
     vim.bo.filetype = "hcl"
@@ -26,6 +32,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 
 -- Open Terraform documentation URLs
 vim.api.nvim_create_autocmd("LspAttach", {
+  group = augroup("terraform_docs"),
   pattern = "*.tf",
   callback = function(event)
     local client = vim.lsp.get_client_by_id(event.data.client_id)
@@ -49,5 +56,18 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end)
       end, { buffer = event.buf, desc = "Open in Terraform Docs" })
     end
+  end,
+})
+
+-- Set colorcolumn (aka ruler) based on filetype
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("colorcolumn"),
+  pattern = "*",
+  callback = function()
+    local columns = {
+      python = "88",
+      rust = "100",
+    }
+    vim.opt_local.colorcolumn = columns[vim.bo.filetype] or "80"
   end,
 })
