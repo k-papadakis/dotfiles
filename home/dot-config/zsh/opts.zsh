@@ -3,7 +3,7 @@
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=50000
 SAVEHIST=10000
-WORDCHARS=''
+WORDCHARS='_'
 
 # Disable Apple's "save/restore shell state" feature.
 SHELL_SESSIONS_DISABLE=1

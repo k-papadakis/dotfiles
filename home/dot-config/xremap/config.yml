@@ -29,6 +29,9 @@ modmap:
   - name: Windows
     device:
       only: *windows_devices
+    application:
+      not:
+        - bg3
     remap:
       WIN_L: ALT_L
       ALT_L: WIN_L
