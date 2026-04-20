@@ -24,6 +24,7 @@ brew "coreutils" if OS.mac?
 brew "coursier/formulas/coursier"
 brew "databricks/tap/databricks"
 brew "direnv" if OS.mac?
+brew "docker-compose"
 brew "eza"
 brew "fastfetch"
 brew "fd"
