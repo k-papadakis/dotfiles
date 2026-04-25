@@ -1,4 +1,9 @@
 -- Modified version of LazyVim's Scala Extra
+local function is_databricks_notebook(bufnr)
+  local first_line = vim.api.nvim_buf_get_lines(bufnr, 0, 1, false)[1]
+  return first_line ~= nil and vim.startswith(first_line, "// Databricks notebook source")
+end
+
 return {
   {
     "scalameta/nvim-metals",
@@ -35,7 +40,10 @@ return {
       local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
       vim.api.nvim_create_autocmd("FileType", {
         pattern = self.ft,
-        callback = function()
+        callback = function(args)
+          if is_databricks_notebook(args.buf) then
+            return
+          end
           require("metals").initialize_or_attach(metals_config)
         end,
         group = nvim_metals_group,
