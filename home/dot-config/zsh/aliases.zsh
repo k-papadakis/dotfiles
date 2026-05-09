@@ -1,5 +1,4 @@
-# HACK: if brew self updates then it fails to discover the Brewfile, so we run it again
-alias bb='brew bundle --global || brew bundle --global'
+alias bb='brew bundle check --global || brew bundle install --global'
 
 # TODO: Remove this when a relevant config option is introduced
 # See also https://github.com/github/copilot-cli/issues/30
