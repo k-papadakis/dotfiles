@@ -1,9 +1,5 @@
 alias bb='brew bundle check --global || brew bundle install --global'
 
-# TODO: Remove this when a relevant config option is introduced
-# See also https://github.com/github/copilot-cli/issues/30
-alias copilot='copilot --disable-mcp-server github-mcp-server'
-
 alias ur='uv run'
 alias urf='uv run ruff format'
 alias urc='uv run ruff check'
