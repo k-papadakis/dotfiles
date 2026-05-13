@@ -33,3 +33,26 @@ Snacks.toggle({
     vim.lsp.inline_completion.enable(state)
   end,
 }):map("<leader>aT")
+
+-- Greek Remaps
+-- stylua: ignore start
+local layout_mappings = {
+  { "α", "a" }, { "β", "b" }, { "ψ", "c" }, { "δ", "d" }, { "ε", "e" },
+  { "φ", "f" }, { "γ", "g" }, { "η", "h" }, { "ι", "i" }, { "ξ", "j" },
+  { "κ", "k" }, { "λ", "l" }, { "μ", "m" }, { "ν", "n" }, { "ο", "o" },
+  { "π", "p" }, { "ρ", "r" }, { "σ", "s" }, { "τ", "t" }, { "θ", "u" },
+  { "ω", "v" }, { "ς", "w" }, { "χ", "x" }, { "υ", "y" }, { "ζ", "z" },
+}
+-- stylua: ignore end
+for _, mapping in ipairs(layout_mappings) do
+  local gr, en = mapping[1], mapping[2]
+  local gr_key = string.format("<C-%s>", gr)
+  local en_key = string.format("<C-%s>", en)
+  local modes = (en == "i") and { "n", "x", "s", "c" } or { "n", "i", "x", "s", "c" }
+  vim.keymap.set(modes, gr_key, en_key, {
+    noremap = true,
+    silent = true,
+    desc = string.format("Greek Ctrl-%s fix", en),
+  })
+end
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-σ>", "<cmd>w<cr><esc>", { desc = "Save File" })
