@@ -123,7 +123,7 @@ cask "monitorcontrol"
 cask "podman-desktop"
 cask "rectangle"
 cask "superwhisper"
-cask "utm" # Troubleshooting: Use "Emulated VLAN" instead of "Shared Network"
+cask "utm" # Troubleshooting: Use "Emulated VLAN" instead of "Shared Network" - see https://github.com/utmapp/UTM/issues/3802#issuecomment-1518924607
 
 uv "markitdown[all]"
 uv "pyhocon"
