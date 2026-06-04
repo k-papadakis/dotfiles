@@ -108,6 +108,8 @@ brew "zsh-syntax-highlighting"
 
 cask "alacritty"
 cask "basictex"
+cask "claude"
+cask "claude-code"
 cask "crystalfetch"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
