@@ -1,4 +1,4 @@
-alias bb='brew bundle check --global || brew bundle install --global'
+alias bb='brew bundle install --global'
 
 alias ur='uv run'
 alias urf='uv run ruff format'
