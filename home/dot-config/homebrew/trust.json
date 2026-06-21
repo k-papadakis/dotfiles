@@ -1,7 +1,7 @@
 {
   "trustedformulae": [
     "anomalyco/tap/opencode",
-    "atlassian-labs/acli/acli",
+    "atlassian/acli/acli",
     "bufbuild/buf/buf",
     "coursier/formulas/coursier",
     "databricks/tap/databricks"

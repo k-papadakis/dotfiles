@@ -3,14 +3,14 @@
 # Taps should be at the top of the Brewfile.
 
 tap "anomalyco/tap"
-tap "atlassian-labs/acli"
+tap "atlassian/acli"
 tap "bufbuild/buf"
 tap "coursier/formulas"
 tap "databricks/tap"
 
 brew "anomalyco/tap/opencode"
 brew "ast-grep"
-brew "atlassian-labs/acli/acli"
+brew "atlassian/acli/acli"
 brew "azure-cli"
 brew "basedpyright"
 brew "bash"
