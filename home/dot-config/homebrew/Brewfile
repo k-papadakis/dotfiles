@@ -43,7 +43,7 @@ brew "ghostscript"
 brew "git-delta"
 brew "git-filter-repo"
 brew "gitleaks"
-brew "glab"
+brew "glab", postinstall: "${HOMEBREW_PREFIX}/bin/glab skills install --path ~/.claude/skills --force"
 brew "gnu-sed" if OS.mac?
 brew "gnupg"
 brew "golang"
