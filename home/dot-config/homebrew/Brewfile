@@ -2,11 +2,11 @@
 
 # Taps should be at the top of the Brewfile.
 
-tap "anomalyco/tap"
-tap "atlassian/acli"
-tap "bufbuild/buf"
-tap "coursier/formulas"
-tap "databricks/tap"
+tap "anomalyco/tap", trusted: {formula: "opencode"}
+tap "atlassian/acli", trusted: {formula: "acli"}
+tap "bufbuild/buf", trusted: {formula: "buf"}
+tap "coursier/formulas", trusted: {formula: "coursier"}
+tap "databricks/tap", trusted: {formula: "databricks"}
 
 brew "anomalyco/tap/opencode"
 brew "ast-grep"
