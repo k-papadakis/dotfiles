@@ -9,7 +9,7 @@ alias urm='uv run mypy'
 alias cr='cargo run'
 
 alias v='nvim'
-alias cl='claude'
+alias c='claude'
 alias opc='opencode'
 alias docker='podman'
 alias tf='terraform'
