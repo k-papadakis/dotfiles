@@ -7,10 +7,16 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
-export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.cargo/bin"
+path=(
+  ${HOME}/.local/bin
+  ${HOME}/.cargo/bin
+  $path
+)
 
-fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
-fpath+=${ZDOTDIR}/.zfunc
+fpath=(
+  ${ZDOTDIR}/.zfunc
+  $fpath
+)
 
 source ${ZDOTDIR}/opts.zsh
 source ${ZDOTDIR}/keybindings.zsh
