@@ -25,7 +25,6 @@ brew "checkbashisms"
 brew "cloc"
 brew "cmatrix"
 brew "container" if OS.mac?
-brew "coreutils" if OS.mac?
 brew "coursier/formulas/coursier"
 brew "cowsay"
 brew "databricks/tap/databricks"
@@ -44,7 +43,6 @@ brew "git-delta"
 brew "git-filter-repo"
 brew "gitleaks"
 brew "glab", postinstall: "${HOMEBREW_PREFIX}/bin/glab skills install --path ~/.claude/skills --force"
-brew "gnu-sed" if OS.mac?
 brew "gnupg"
 brew "golang"
 brew "graphviz"
@@ -108,6 +106,13 @@ brew "yq"
 brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+
+# GNU over BSD
+brew "coreutils" if OS.mac?
+brew "findutils" if OS.mac?
+brew "gnu-sed" if OS.mac?
+brew "gnu-tar" if OS.mac?
+brew "grep" if OS.mac?
 
 cask "alacritty"
 cask "basictex"
