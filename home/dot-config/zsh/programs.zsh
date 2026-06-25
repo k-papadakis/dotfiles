@@ -13,13 +13,7 @@ export BAT_THEME="tokyonight_night"
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# The colors are messed up when using bat for manpages on linux.
-# Nvim is great for manpaging, although a bit slow.
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  export MANPAGER='nvim +Man!'
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-  export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain'"
-fi
+export MANPAGER='nvim +Man!'
 
 export LESS="i"
 export LESSUTFCHARDEF="e000-f8ff:p,f0001-fffff:p"  # nerd font symbols
