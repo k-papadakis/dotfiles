@@ -9,14 +9,13 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 # export BAT_THEME="Visual Studio Dark+"
 export BAT_THEME="tokyonight_night"
 
-
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 
 export MANPAGER='nvim +Man!'
 
 export LESS="i"
-export LESSUTFCHARDEF="e000-f8ff:p,f0001-fffff:p"  # nerd font symbols
+export LESSUTFCHARDEF="e000-f8ff:p,f0001-fffff:p" # nerd font symbols
 
 # Default Editor
 if [[ -n ${SSH_CONNECTION} ]]; then
@@ -30,17 +29,17 @@ export EDITOR="${VISUAL}"
 export BUILDAH_FORMAT=docker
 
 # Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/theme-and-appearance.zsh
-# Sets color variable such as $fg, $bg, $color and $reset_color
+# Sets color variables such as fg, bg, color and reset_color
 autoload -U colors && colors
 # Default coloring for BSD-based ls
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 # Default coloring for GNU-based ls
-if [[ -z "$LS_COLORS" ]]; then
+if [[ -z "${LS_COLORS}" ]]; then
   # Define LS_COLORS via dircolors if available. Otherwise, set a default
   # equivalent to LSCOLORS (generated via https://geoff.greer.fm/lscolors)
-  if (( $+commands[dircolors] )); then
-    if [[ -f "$HOME/.dircolors" ]]; then
-      source <(dircolors -b "$HOME/.dircolors")
+  if (($+commands[dircolors])); then
+    if [[ -f "${HOME}/.dircolors" ]]; then
+      source <(dircolors -b "${HOME}/.dircolors")
     else
       source <(dircolors -b)
     fi

@@ -1,4 +1,4 @@
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "${OSTYPE}" == "darwin"* ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
   # >>> JVM installed by coursier >>>
@@ -6,6 +6,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # <<< JVM installed by coursier <<<
 
   # >>> coursier install directory >>>
-  export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
+  export PATH="${PATH}:${HOME}/Library/Application Support/Coursier/bin"
   # <<< coursier install directory <<<
 fi

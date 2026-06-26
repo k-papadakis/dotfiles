@@ -1,4 +1,4 @@
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+if [[ "${OSTYPE}" == "linux-gnu"* ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
@@ -7,7 +7,7 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "${OSTYPE}" == "darwin"* ]]; then
   # GNU over BSD
   path=(
     ${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnubin
@@ -15,7 +15,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     ${HOMEBREW_PREFIX}/opt/findutils/libexec/gnubin
     ${HOMEBREW_PREFIX}/opt/gnu-tar/libexec/gnubin
     ${HOMEBREW_PREFIX}/opt/grep/libexec/gnubin
-    $path
+    ${path}
   )
   manpath=(
     ${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnuman
@@ -23,19 +23,19 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     ${HOMEBREW_PREFIX}/opt/findutils/libexec/gnuman
     ${HOMEBREW_PREFIX}/opt/gnu-tar/libexec/gnuman
     ${HOMEBREW_PREFIX}/opt/grep/libexec/gnuman
-    $manpath
+    ${manpath}
   )
 fi
 
 path=(
   ${HOME}/.local/bin
   ${HOME}/.cargo/bin
-  $path
+  ${path}
 )
 
 fpath=(
   ${ZDOTDIR}/.zfunc
-  $fpath
+  ${fpath}
 )
 
 source "${ZDOTDIR}/opts.zsh"
