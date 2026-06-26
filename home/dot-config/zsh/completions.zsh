@@ -10,4 +10,3 @@ autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERS
 autoload -Uz bashcompinit && bashcompinit
 
 complete -o nospace -C terraform terraform
-source "${HOMEBREW_PREFIX}/etc/bash_completion.d/az"
