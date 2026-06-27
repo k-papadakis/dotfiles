@@ -6,6 +6,8 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 path=(
   ${HOME}/.local/bin
   ${HOME}/.cargo/bin
+  ${HOME}/.cabal/bin
+  ${HOME}/.ghcup/bin
   ${XDG_DATA_HOME}/coursier/bin
   ${path}
 )
