@@ -16,3 +16,6 @@
 [submodule "home/dot-config/zsh/themes/zsh-syntax-highlighting/catppuccin"]
 	path = home/dot-config/zsh/themes/zsh-syntax-highlighting/catppuccin
 	url = https://github.com/catppuccin/zsh-syntax-highlighting
+[submodule "home/dot-config/ghostty/shaders/ghostty-cursor-shaders"]
+	path = home/dot-config/ghostty/shaders/ghostty-cursor-shaders
+	url = https://github.com/sahaj-b/ghostty-cursor-shaders

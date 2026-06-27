@@ -7,6 +7,7 @@ alias urm='uv run mypy'
 alias cr='cargo run'
 
 alias v='nvim'
+alias c='claude'
 alias opc='opencode'
 alias tf='terraform'
 alias cd='z'

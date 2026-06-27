@@ -1,0 +1,56 @@
+# NOTE:
+# Ghostty does not support `bind-key a last-window` yet
+# https://github.com/ghostty-org/ghostty/issues/1844
+
+# ==============================================================================
+# Theme & OS Integrations
+# ==============================================================================
+theme = tokyonight
+macos-option-as-alt = true
+
+# Steady Thin Cursor
+cursor-style = bar
+cursor-style-blink = false
+custom-shader = shaders/ghostty-cursor-shaders/cursor_tail.glsl
+custom-shader-animation = always
+
+# ==============================================================================
+# Pure Native Key Sequences (Your Custom Tmux Ecosystem)
+# ==============================================================================
+# Send the prefix itself to the shell
+keybind = ctrl+key_a>ctrl+key_a=text:\x01
+
+# Core Actions (Blind to English/Greek layouts via hardware scancodes)
+keybind = ctrl+key_a>key_c=new_tab
+keybind = ctrl+key_a>key_p=previous_tab
+keybind = ctrl+key_a>key_n=next_tab
+keybind = ctrl+key_a>key_x=close_surface
+keybind = ctrl+key_a>key_z=toggle_split_zoom
+keybind = ctrl+key_a>key_w=toggle_command_palette
+
+# Spatial Split Navigation (hjkl / ηξκλ)
+keybind = ctrl+key_a>key_h=goto_split:left
+keybind = ctrl+key_a>key_j=goto_split:down
+keybind = ctrl+key_a>key_k=goto_split:up
+keybind = ctrl+key_a>key_l=goto_split:right
+
+# Layout-Stable Window Splits & Tab Management
+keybind = ctrl+key_a>-=new_split:down
+keybind = ctrl+key_a>shift+backslash=new_split:right
+keybind = ctrl+key_a>shift+7=close_tab
+
+# Runtime Configuration Reloading
+keybind = ctrl+key_a>shift+key_r=reload_config
+
+# ==============================================================================
+# Persistent Resize Mode (Unified via Physical Keys)
+# ==============================================================================
+keybind = ctrl+key_a>key_r=activate_key_table:resize
+
+keybind = resize/catch_all=ignore
+keybind = resize/escape=deactivate_key_table
+
+keybind = resize/key_h=resize_split:left,10
+keybind = resize/key_j=resize_split:down,10
+keybind = resize/key_k=resize_split:up,10
+keybind = resize/key_l=resize_split:right,10
