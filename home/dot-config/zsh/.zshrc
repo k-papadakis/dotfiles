@@ -6,7 +6,7 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 path=(
   ${HOME}/.local/bin
   ${HOME}/.cargo/bin
-  ${HOME}/.local/share/coursier/bin
+  ${XDG_DATA_HOME}/coursier/bin
   ${path}
 )
 
