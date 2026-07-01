@@ -30,6 +30,8 @@ fi
 path=(
   ${HOME}/.local/bin
   ${HOME}/.cargo/bin
+  ${HOME}/.cabal/bin
+  ${HOME}/.ghcup/bin
   ${HOMEBREW_PREFIX}/opt/rustup/bin
   ${path}
 )
