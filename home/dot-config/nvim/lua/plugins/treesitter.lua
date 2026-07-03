@@ -6,7 +6,6 @@ return {
         "jq",
         "css",
         "latex",
-        "norg",
         "scss",
         "svelte",
         "typst",
