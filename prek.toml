@@ -20,15 +20,6 @@ hooks = [
 ]
 
 [[repos]]
-repo = "https://github.com/pre-commit/pre-commit-hooks"
-rev = "v5.0.0"
-hooks = [
-  { id = "detect-aws-credentials", args = [
-    "--allow-missing-credentials",
-  ] },
-]
-
-[[repos]]
 repo = "https://github.com/compilerla/conventional-pre-commit"
 rev = "v4.2.0"
 hooks = [{ id = "conventional-pre-commit", args = [] }]
