@@ -26,8 +26,6 @@ mkdir ~/.config
 stow --verbose --restow --target="$HOME" \
   --dir ~/projects/personal/dotfiles --dotfiles home
 
-bat cache --build
-
 gh auth login
 ```
 
