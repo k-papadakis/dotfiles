@@ -1,7 +1,8 @@
 .DS_Store
 home/dot-config/karabiner/*
 !home/dot-config/karabiner/karabiner.json
-home/dot-config/zsh/.zfunc/_*
+home/dot-config/zsh/completions/*
+!home/dot-config/zsh/completions/.gitkeep
 home/dot-config/zsh/.zsh_sessions/
 home/dot-config/tmux/plugins
 home/dot-config/btop/btop.log

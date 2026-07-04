@@ -36,11 +36,6 @@ path=(
   ${path}
 )
 
-fpath=(
-  ${ZDOTDIR}/.zfunc
-  ${fpath}
-)
-
 source "${ZDOTDIR}/opts.zsh"
 source "${ZDOTDIR}/keybindings.zsh"
 source "${ZDOTDIR}/completions.zsh"
