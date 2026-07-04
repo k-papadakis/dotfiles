@@ -25,8 +25,6 @@ brew bundle install --file \
 mkdir ~/.config
 stow --verbose --restow --target="$HOME" \
   --dir ~/projects/personal/dotfiles --dotfiles home
-
-gh auth login
 ```
 
 ### Alacritty fix on MacOS
