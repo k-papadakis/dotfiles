@@ -68,7 +68,7 @@ brew "pinentry-mac" if OS.mac?
 brew "pipenv"
 brew "poppler"
 brew "powershell"
-brew "pre-commit"
+brew "prek"
 brew "prettier"
 brew "protobuf"
 brew "python"
