@@ -11,11 +11,17 @@ hooks = [
   { id = "check-case-conflict" },
   { id = "check-executables-have-shebangs" },
   { id = "check-illegal-windows-names" },
+  { id = "check-json" },
+  { id = "check-merge-conflict" },
   { id = "check-shebang-scripts-are-executable" },
   { id = "check-symlinks" },
+  { id = "check-toml" },
+  { id = "check-yaml" },
   { id = "destroyed-symlinks" },
   { id = "detect-private-key" },
   { id = "end-of-file-fixer" },
+  { id = "fix-byte-order-marker" },
+  { id = "mixed-line-ending" },
   { id = "trailing-whitespace" },
 ]
 
