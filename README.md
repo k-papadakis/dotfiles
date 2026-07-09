@@ -25,15 +25,6 @@ brew bundle install --file \
 mkdir ~/.config
 stow --verbose --restow --target="$HOME" \
   --dir ~/projects/personal/dotfiles --dotfiles home
-
-bat cache --build
-
-mkdir ~/.config/zsh/.zfunc
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-rustup completions zsh >~/.config/zsh/.zfunc/_rustup
-rustup completions zsh cargo >~/.config/zsh/.zfunc/_cargo
-
-gh auth login
 ```
 
 ### Alacritty fix on MacOS

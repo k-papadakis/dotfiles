@@ -26,6 +26,7 @@ alias pydoc='python3 -m pydoc'
 alias icat='kitten icat'
 alias dab='databricks bundle'
 alias ghmp='gh markdown-preview --markdown-mode'
+alias yless="jless --yaml"
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
