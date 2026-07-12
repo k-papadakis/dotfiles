@@ -141,6 +141,7 @@ cask "utm" # Troubleshooting: Use "Emulated VLAN" instead of "Shared Network" - 
 
 # npm "..."
 
+uv "atl-cli"
 uv "markitdown[all]"
 uv "pyhocon"
 uv "terminaltexteffects"
