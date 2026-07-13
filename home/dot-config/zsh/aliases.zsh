@@ -9,7 +9,7 @@ alias urm='uv run mypy'
 alias cr='cargo run'
 
 alias v='nvim'
-alias view='nvim -M' # /usr/bin/view is `vim -R`
+alias view='nvim -R'
 alias opc='opencode'
 alias docker='podman'
 alias tf='terraform'
