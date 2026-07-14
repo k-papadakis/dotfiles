@@ -134,7 +134,7 @@ cask "maccy"
 cask "monitorcontrol"
 cask "podman-desktop", postinstall: "podman completion zsh >~/.config/zsh/completions/_podman"
 cask "rectangle"
-cask "superwhisper"
+cask "opensuperwhisper"
 cask "utm" # Troubleshooting: Use "Emulated VLAN" instead of "Shared Network" - see https://github.com/utmapp/UTM/issues/3802#issuecomment-1518924607
 
 # cargo "..."
