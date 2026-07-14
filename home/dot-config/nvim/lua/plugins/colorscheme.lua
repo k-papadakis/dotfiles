@@ -79,7 +79,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-night",
+      colorscheme = vim.env.NVIM_COLORSCHEME or "tokyonight-night",
     },
   },
 }
