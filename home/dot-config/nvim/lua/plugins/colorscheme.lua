@@ -88,7 +88,26 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = vim.env.NVIM_COLORSCHEME or "tokyonight-night",
+      colorscheme = function()
+        local colorscheme = vim.env.NVIM_COLORSCHEME
+
+        if not colorscheme and vim.env.KITTY_SCROLLBACK_NVIM == "true" then
+          local result = vim
+            .system({
+              "zsh",
+              "-c",
+              'source "$ZDOTDIR/theme.zsh" >/dev/null && print -r -- "$NVIM_COLORSCHEME"',
+            }, { text = true })
+            :wait()
+          local output = vim.trim(result.stdout)
+
+          if result.code == 0 and output ~= "" then
+            colorscheme = output
+          end
+        end
+
+        vim.cmd.colorscheme(colorscheme or "tokyonight-night")
+      end,
     },
   },
 }
