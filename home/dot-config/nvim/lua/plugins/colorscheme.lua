@@ -53,6 +53,15 @@ return {
           StatusLine = { bg = colors.theme.ui.bg_p1 },
         }
       end,
+      colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = "none",
+            },
+          },
+        },
+      },
     },
   },
   {
