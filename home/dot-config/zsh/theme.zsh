@@ -1,4 +1,4 @@
-export DOTFILES_THEME="tokyonight"
+export DOTFILES_THEME="kanagawa"
 
 case "${DOTFILES_THEME:-}" in
 kanagawa)
