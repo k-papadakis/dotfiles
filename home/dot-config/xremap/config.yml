@@ -64,6 +64,7 @@ keymap:
       C-equal: Super-equal
       C-minus: Super-minus
       C-Shift-z: Super-Shift-z
+      C-l: Super-l
       M-f: C-right
       M-b: C-left
       # map the originals to super
@@ -85,6 +86,7 @@ keymap:
       Super-equal: C-equal
       Super-minus: C-minus
       Super-Shift-z: C-Shift-z
+      Super-l: C-l
 
   - name: Terminal applications
     application:
