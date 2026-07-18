@@ -65,6 +65,7 @@ keymap:
       C-minus: Super-minus
       C-Shift-z: Super-Shift-z
       C-l: Super-l
+      C-r: Super-r
       M-f: C-right
       M-b: C-left
       # map the originals to super
@@ -87,6 +88,7 @@ keymap:
       Super-minus: C-minus
       Super-Shift-z: C-Shift-z
       Super-l: C-l
+      Super-r: C-r
 
   - name: Terminal applications
     application:
