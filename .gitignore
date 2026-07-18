@@ -10,4 +10,7 @@ home/dot-config/zsh/.zcompdump
 home/dot-config/kitty/current-theme.conf
 home/dot-config/homebrew/trust.json
 home/dot-config/homebrew/trust.json.lock
+home/dot-config/opencode/*
+!home/dot-config/opencode/tui.json
+!home/dot-config/opencode/tui.jsonc
 *.bak
