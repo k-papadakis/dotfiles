@@ -1,11 +1,5 @@
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 
-# export BAT_THEME="Catppuccin Macchiato"
-# export BAT_THEME="gruvbox-material-dark"
-# export BAT_THEME="kanagawa"
-# export BAT_THEME="Visual Studio Dark+"
-export BAT_THEME="tokyonight_night"
-
 export MANPAGER='nvim +Man!'
 
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
@@ -46,11 +40,6 @@ eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
-# source "${ZDOTDIR}/themes/fzf/catppuccin/catppuccin-macchiato.sh"
-# source "${ZDOTDIR}/themes/fzf/tinted-fzf/sh/base16-gruvbox-material-dark-medium.sh"
-# source "${ZDOTDIR}/themes/fzf/tinted-fzf/sh/base16-kanagawa.sh"
-source "${ZDOTDIR}/themes/fzf/tokyonight/tokyonight_night.sh"
 source <(fzf --zsh)
 source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-# source "${ZDOTDIR}/themes/zsh-syntax-highlighting/catppuccin/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh"
 source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

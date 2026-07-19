@@ -46,14 +46,23 @@ return {
   {
     "rebelot/kanagawa.nvim",
     lazy = true,
-    init = function()
-      vim.api.nvim_create_autocmd("ColorScheme", {
-        pattern = "kanagawa",
-        callback = function()
-          vim.api.nvim_set_hl(0, "StatusLine", { link = "lualine_c_normal" })
-        end,
-      })
-    end,
+    opts = {
+      overrides = function(colors)
+        return {
+          -- https://github.com/rebelot/kanagawa.nvim/issues/243#issuecomment-4844321659
+          StatusLine = { bg = colors.theme.ui.bg_p1 },
+        }
+      end,
+      colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = "none",
+            },
+          },
+        },
+      },
+    },
   },
   {
     "sainnhe/gruvbox-material",
@@ -79,7 +88,26 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-night",
+      colorscheme = function()
+        local colorscheme = vim.env.NVIM_COLORSCHEME
+
+        if not colorscheme and vim.env.KITTY_SCROLLBACK_NVIM == "true" then
+          local result = vim
+            .system({
+              "zsh",
+              "-c",
+              'source "$ZDOTDIR/theme.zsh" >/dev/null && print -r -- "$NVIM_COLORSCHEME"',
+            }, { text = true })
+            :wait()
+          local output = vim.trim(result.stdout)
+
+          if result.code == 0 and output ~= "" then
+            colorscheme = output
+          end
+        end
+
+        vim.cmd.colorscheme(colorscheme or "tokyonight-night")
+      end,
     },
   },
 }

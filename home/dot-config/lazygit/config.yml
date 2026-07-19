@@ -1,12 +1,7 @@
 git:
   pagers:
     - colorArg: always
-      pager: |
-        if [ -n "$NVIM" ]; then
-            delta --syntax-theme="tokyonight_night" --paging=never
-        else
-            delta --paging=never
-        fi
+      pager: delta --paging=never
   overrideGpg: true
 gui:
   nerdFontsVersion: "3"

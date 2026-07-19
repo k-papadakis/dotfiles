@@ -1,0 +1,10 @@
+# vim: filetype=zsh
+c() {
+  local model
+  model=$(printf '%s\n' opus sonnet haiku fable | fzf --prompt='model> ' --height=~50%) || return
+
+  local mode
+  mode=$(printf '%s\n' plan auto | fzf --prompt='mode> ' --height=~50%) || return
+
+  [ -n "$model" ] && claude --model "$model" --permission-mode "$mode" "$@"
+}

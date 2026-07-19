@@ -22,6 +22,9 @@ map("t", "jk", function()
   vim.cmd("stopinsert")
 end)
 
+-- <leader>= as an alternative to <leader>| because it is easier to type
+map("n", "<leader>=", "<C-W>v", { desc = "Split Window Right", remap = true })
+
 -- https://github.com/LazyVim/LazyVim/discussions/6587#discussioncomment-14598232
 Snacks.toggle({
   name = "AI suggestions",

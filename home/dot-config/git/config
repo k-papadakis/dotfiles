@@ -21,6 +21,7 @@
     colorMoved = default
 [alias]
     delta = -c core.pager=delta -c interactive.diffFilter='delta --color-only' -c delta.features=side-by-side diff
+    difft = -c diff.external=difft diff
     browse = "! \
         url=$(git remote get-url origin); \
         case \"$url\" in \
