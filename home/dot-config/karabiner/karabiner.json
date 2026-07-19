@@ -57,27 +57,6 @@
             ]
           },
           {
-            "description": "Enter: {tap: Enter, combine: Cmd+Opt+Ctrl+Shift}",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "return_or_enter"
-                },
-                "to": {
-                  "key_code": "right_shift",
-                  "modifiers": [
-                    "right_command",
-                    "right_option",
-                    "right_control"
-                  ]
-                },
-                "to_if_alone": [{ "key_code": "return_or_enter" }],
-                "type": "basic",
-                "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 }
-              }
-            ]
-          },
-          {
             "description": "Control+m to Enter if not in Terminal or in Editor",
             "manipulators": [
               {
@@ -220,14 +199,14 @@
             ]
           },
           {
-            "description": "Open Terminal by cmd+opt+ctrl+shift+t",
+            "description": "opt+2 → Kitty",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "t",
+                  "key_code": "2",
                   "modifiers": {
-                    "mandatory": ["command", "option", "control", "shift"],
-                    "optional": ["caps_lock"]
+                    "mandatory": ["option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -244,14 +223,14 @@
             ]
           },
           {
-            "description": "Open Browser by cmd+opt+ctrl+shift+b",
+            "description": "opt+3 → Chrome",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "b",
+                  "key_code": "3",
                   "modifiers": {
-                    "mandatory": ["command", "option", "control", "shift"],
-                    "optional": ["caps_lock"]
+                    "mandatory": ["option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -268,14 +247,14 @@
             ]
           },
           {
-            "description": "Open Slack by cmd+opt+ctrl+shift+s",
+            "description": "opt+4 → Slack",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "s",
+                  "key_code": "4",
                   "modifiers": {
-                    "mandatory": ["command", "option", "control", "shift"],
-                    "optional": ["caps_lock"]
+                    "mandatory": ["option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -283,30 +262,6 @@
                     "software_function": {
                       "open_application": {
                         "file_path": "/Applications/Slack.app"
-                      }
-                    }
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Open Visual Studio Code by cmd+opt+ctrl+shift+c",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "c",
-                  "modifiers": {
-                    "mandatory": ["command", "option", "control", "shift"],
-                    "optional": ["caps_lock"]
-                  }
-                },
-                "to": [
-                  {
-                    "software_function": {
-                      "open_application": {
-                        "file_path": "/Applications/Visual Studio Code.app/"
                       }
                     }
                   }
