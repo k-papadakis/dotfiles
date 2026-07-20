@@ -8,7 +8,7 @@ tap "bufbuild/buf", trusted: {formula: "buf"}
 tap "coursier/formulas", trusted: {formula: "coursier"}
 tap "databricks/tap", trusted: {formula: "databricks"}
 
-brew "anomalyco/tap/opencode"
+brew "anomalyco/tap/opencode", postinstall: "${HOMEBREW_PREFIX}/bin/opencode completion >~/.config/zsh/completions/_opencode"
 brew "ast-grep"
 brew "atlassian/acli/acli", postinstall: "${HOMEBREW_PREFIX}/bin/acli completion zsh >~/.config/zsh/completions/_acli"
 brew "azure-cli"
