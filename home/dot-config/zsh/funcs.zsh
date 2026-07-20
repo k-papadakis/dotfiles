@@ -4,4 +4,4 @@ fpath=(
 )
 
 # Use `autoload -U` to avoid expanding aliases
-autoload mkcd y c copilot-quota
+autoload mkcd y c copilot-quota claude-quota
