@@ -13,4 +13,6 @@ home/dot-config/homebrew/trust.json.lock
 home/dot-config/opencode/*
 !home/dot-config/opencode/tui.json
 !home/dot-config/opencode/tui.jsonc
+home/dot-config/hunk/*
+!home/dot-config/hunk/config.toml
 *.bak
