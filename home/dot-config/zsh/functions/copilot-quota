@@ -1,0 +1,50 @@
+# vim: filetype=zsh
+copilot-quota() {
+  if ! command -v gh >/dev/null 2>&1; then
+    printf '%s\n' 'copilot-quota: gh command not found' >&2
+    return 127
+  fi
+
+  if (($# > 1)); then
+    printf '%s\n' 'usage: copilot-quota [account]' >&2
+    return 1
+  fi
+
+  local account token
+  (($# == 1)) && account=$1
+
+  local query='
+    .quota_snapshots.premium_interactions as $quota |
+    [
+      .login,
+      ($quota.credits_used | floor),
+      ($quota.entitlement | floor),
+      ($quota.percent_remaining | tonumber),
+      .quota_reset_date
+    ] |
+    @tsv
+  '
+  local output login credits entitlement remaining reset
+
+  if (($# == 0)); then
+    output=$(GH_HOST=github.com gh api /copilot_internal/user --jq "$query") || return
+  else
+    token=$(gh auth token --hostname github.com --user "$account") || return
+    output=$(GH_HOST=github.com GH_TOKEN="$token" gh api /copilot_internal/user --jq "$query") || return
+  fi
+
+  IFS=$'\t' read -r login credits entitlement remaining reset <<<"$output"
+  if [[ -z $login || -z $credits || -z $entitlement || -z $remaining || -z $reset ]]; then
+    printf '%s\n' 'copilot-quota: quota data unavailable' >&2
+    return 1
+  fi
+
+  if ((entitlement == 0)); then
+    printf '%s\n' "$login: no Copilot quota available"
+    return 0
+  fi
+
+  LC_NUMERIC=en_US.UTF-8 printf -v output '%s: %\x27d / %\x27d (%.1f%%) credits used, resets %s\n' \
+    "$login" "$credits" "$entitlement" "$((100 - remaining))" "$reset"
+  printf '%s' "$output"
+}
