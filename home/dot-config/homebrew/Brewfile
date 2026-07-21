@@ -30,6 +30,7 @@ brew "databricks/tap/databricks"
 brew "direnv" if OS.mac?
 brew "docker-compose"
 brew "duckdb"
+brew "dust"
 brew "eza"
 brew "fastfetch"
 brew "fd"
