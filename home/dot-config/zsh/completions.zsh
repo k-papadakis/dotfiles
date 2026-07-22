@@ -2,8 +2,8 @@
 [ -d "${ZDOTDIR}/completions" ] || mkdir -p "${ZDOTDIR}/completions"
 
 fpath=(
-  ${ZDOTDIR}/completions
-  ${fpath}
+  "${ZDOTDIR}/completions"
+  "${fpath[@]}"
 )
 
 zstyle ':completion:*' cache-path "${XDG_CACHE_HOME}/zsh/zcompcache"

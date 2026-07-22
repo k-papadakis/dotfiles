@@ -1,6 +1,6 @@
 fpath=(
-  ${ZDOTDIR}/functions
-  ${fpath}
+  "${ZDOTDIR}/functions"
+  "${fpath[@]}"
 )
 
 # Use `autoload -U` to avoid expanding aliases
