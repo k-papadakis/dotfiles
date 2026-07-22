@@ -135,6 +135,7 @@ cask "utm" # Troubleshooting: Use "Emulated VLAN" instead of "Shared Network" - 
 # npm "..."
 
 uv "atl-cli"
+uv "dagster-dg-cli", with: ["typer<0.26"] # HACK: `--help` not showing options https://github.com/dagster-io/dagster/issues/33893
 uv "markitdown[all]"
 uv "pyhocon"
 uv "terminaltexteffects"
