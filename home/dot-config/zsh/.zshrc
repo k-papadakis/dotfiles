@@ -8,6 +8,16 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 if [[ "${OSTYPE}" == "darwin"* ]]; then
+  export JAVA_HOME="${HOME}/Library/Caches/Coursier/arc/https/cdn.azul.com/zulu/bin/zulu17.66.19-ca-jdk17.0.19-macosx_aarch64.tar.gz/zulu17.66.19-ca-jdk17.0.19-macosx_aarch64/Contents/Home"
+
+  path=(
+    "${JAVA_HOME}/bin"
+    "${HOME}/Library/Application Support/Coursier/bin"
+    "${path[@]}"
+  )
+fi
+
+if [[ "${OSTYPE}" == "darwin"* ]]; then
   # GNU over BSD
   path=(
     "${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnubin"
