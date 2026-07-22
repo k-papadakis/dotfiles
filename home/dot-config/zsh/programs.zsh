@@ -16,9 +16,6 @@ else
 fi
 export EDITOR="${VISUAL}"
 
-# Prevent Podman from using the OCI format
-export BUILDAH_FORMAT=docker
-
 # Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/theme-and-appearance.zsh
 # Sets color variables such as fg, bg, color and reset_color
 autoload -U colors && colors
