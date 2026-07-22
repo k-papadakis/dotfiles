@@ -8,9 +8,6 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 
 export MANPAGER='nvim +Man!'
 
-export LESS="i"
-export LESSUTFCHARDEF="e000-f8ff:p,f0001-fffff:p" # nerd font symbols
-
 # Default Editor
 if [[ -n ${SSH_CONNECTION} ]]; then
   export VISUAL=vim
