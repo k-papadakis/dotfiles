@@ -39,6 +39,7 @@ path=(
 source "${ZDOTDIR}/opts.zsh"
 source "${ZDOTDIR}/keybindings.zsh"
 source "${ZDOTDIR}/completions.zsh"
+source "${ZDOTDIR}/colors.zsh"
 source "${ZDOTDIR}/theme.zsh"
 source "${ZDOTDIR}/programs.zsh"
 source "${ZDOTDIR}/aliases.zsh"
