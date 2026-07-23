@@ -100,6 +100,7 @@ brew "ty"
 brew "unixodbc"
 brew "uv"
 brew "wget"
+brew "yaml-language-server"
 brew "yazi" # opt deps: ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide resvg imagemagick font-symbols-only-nerd-font
 brew "yq"
 brew "zoxide"
