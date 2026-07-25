@@ -4,12 +4,12 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 path=(
-  ${HOME}/.local/bin
-  ${HOME}/.cargo/bin
-  ${HOME}/.cabal/bin
-  ${HOME}/.ghcup/bin
-  ${XDG_DATA_HOME}/coursier/bin
-  ${path}
+  "${HOME}/.local/bin"
+  "${HOME}/.cargo/bin"
+  "${HOME}/.cabal/bin"
+  "${HOME}/.ghcup/bin"
+  "${XDG_DATA_HOME}/coursier/bin"
+  "${path[@]}"
 )
 
 source "${ZDOTDIR}/opts.zsh"
