@@ -3,6 +3,7 @@ home/dot-config/karabiner/*
 !home/dot-config/karabiner/karabiner.json
 home/dot-config/zsh/completions/*
 !home/dot-config/zsh/completions/.gitkeep
+!home/dot-config/zsh/completions/_copilot-quota
 home/dot-config/zsh/.zsh_sessions/
 home/dot-config/tmux/plugins
 home/dot-config/btop/btop.log
@@ -13,4 +14,6 @@ home/dot-config/homebrew/trust.json.lock
 home/dot-config/opencode/*
 !home/dot-config/opencode/tui.json
 !home/dot-config/opencode/tui.jsonc
+home/dot-config/hunk/*
+!home/dot-config/hunk/config.toml
 *.bak

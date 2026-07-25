@@ -1,0 +1,68 @@
+# vim: filetype=zsh
+claude-quota() {
+  if (($# > 0)); then
+    printf '%s\n' 'usage: claude-quota' >&2
+    return 1
+  fi
+
+  local dependency
+  for dependency in jq curl; do
+    if ! command -v "$dependency" >/dev/null 2>&1; then
+      printf 'claude-quota: %s command not found\n' "$dependency" >&2
+      return 127
+    fi
+  done
+
+  # Credential storage varies by platform: https://code.claude.com/docs/en/authentication#credential-management
+  local credentials token usage used limit utilization currency credentials_file
+  credentials_file="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/.credentials.json"
+
+  if [[ $OSTYPE == darwin* ]]; then
+    if ! command -v security >/dev/null 2>&1; then
+      printf '%s\n' 'claude-quota: security command not found' >&2
+      return 127
+    fi
+
+    credentials=$(security find-generic-password -s 'Claude Code-credentials' -w 2>/dev/null) || {
+      printf '%s\n' 'claude-quota: Claude Code credentials not found' >&2
+      return 1
+    }
+  elif [[ -r $credentials_file ]]; then
+    credentials=$(<"$credentials_file")
+  else
+    printf '%s\n' 'claude-quota: Claude Code credentials not found' >&2
+    return 1
+  fi
+
+  token=$(jq -r '.claudeAiOauth.accessToken // empty' <<<"$credentials")
+  if [[ -z $token ]]; then
+    printf '%s\n' 'claude-quota: no OAuth access token found' >&2
+    return 1
+  fi
+
+  usage=$(curl -fsS 'https://api.anthropic.com/api/oauth/usage' \
+    -H "Authorization: Bearer $token") || {
+    printf '%s\n' 'claude-quota: usage request failed' >&2
+    return 1
+  }
+
+  IFS=$'\t' read -r used limit utilization currency <<<"$(jq -r '
+    .spend.used.exponent as $exponent |
+    (pow(10; $exponent)) as $divisor |
+    [
+      (.spend.used.amount_minor / $divisor),
+      (.spend.limit.amount_minor / $divisor),
+      (.spend.used.amount_minor / .spend.limit.amount_minor * 100),
+      .spend.used.currency
+    ] |
+    @tsv
+  ' <<<"$usage")"
+
+  if [[ -z $used || -z $limit || -z $utilization || -z $currency ]]; then
+    printf '%s\n' 'claude-quota: usage data unavailable' >&2
+    return 1
+  fi
+
+  printf 'Claude: %.2f / %.2f (%.1f%%) %s used\n' \
+    "$used" "$limit" "$utilization" "$currency"
+}

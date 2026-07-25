@@ -1,0 +1,10 @@
+#compdef copilot-quota
+
+_copilot-quota() {
+  (( CURRENT == 2 )) || return
+
+  local -a accounts
+  accounts=("${(@f)$(gh auth status --hostname github.com --json hosts --jq '.hosts["github.com"][].login' 2>/dev/null)}")
+
+  _describe -t accounts 'GitHub account' accounts
+}
