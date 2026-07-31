@@ -27,7 +27,7 @@ brew "cmatrix"
 brew "container" if OS.mac?
 brew "coursier/formulas/coursier", postinstall: %q[printf '#compdef cs\n\n_cs() {\n  eval "$(cs complete zsh-v1 $CURRENT $words[@])"\n}\n' >~/.config/zsh/completions/_cs]
 brew "cowsay"
-brew "databricks/tap/databricks"
+brew "databricks/tap/databricks", postinstall: "rm -rf ~/.local/share/skills/generated/databricks && mkdir -p ~/.local/share/skills/generated/databricks && ${HOMEBREW_PREFIX}/bin/databricks aitools install --path ~/.local/share/skills/generated/databricks"
 brew "difftastic"
 brew "direnv" if OS.mac?
 brew "docker-compose"
@@ -44,7 +44,7 @@ brew "ghostscript"
 brew "git-delta"
 brew "git-filter-repo"
 brew "gitleaks", postinstall: "${HOMEBREW_PREFIX}/bin/gitleaks completion zsh >~/.config/zsh/completions/_gitleaks"
-brew "glab", postinstall: "${HOMEBREW_PREFIX}/bin/glab skills install --path ~/.claude/skills --force"
+brew "glab", postinstall: "rm -rf ~/.local/share/skills/generated/glab && mkdir -p ~/.local/share/skills/generated && ${HOMEBREW_PREFIX}/bin/glab skills install --path ~/.local/share/skills/generated"
 brew "gnupg"
 brew "golang"
 brew "graphviz"
