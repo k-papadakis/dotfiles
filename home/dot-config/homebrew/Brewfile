@@ -2,12 +2,14 @@
 
 # Taps should be at the top of the Brewfile.
 
+tap "agavra/tap", trusted: {formula: "tuicr"}
 tap "anomalyco/tap", trusted: {formula: "opencode"}
 tap "atlassian/acli", trusted: {formula: "acli"}
 tap "bufbuild/buf", trusted: {formula: "buf"}
 tap "coursier/formulas", trusted: {formula: "coursier"}
 tap "databricks/tap", trusted: {formula: "databricks"}
 
+brew "agavra/tap/tuicr"
 brew "anomalyco/tap/opencode", postinstall: "${HOMEBREW_PREFIX}/bin/opencode completion >~/.config/zsh/completions/_opencode"
 brew "ast-grep"
 brew "atlassian/acli/acli", postinstall: "${HOMEBREW_PREFIX}/bin/acli completion zsh >~/.config/zsh/completions/_acli"
@@ -17,7 +19,6 @@ brew "bash"
 brew "bashdb"
 brew "bat", postinstall: "${HOMEBREW_PREFIX}/bin/bat cache --build"
 brew "bats-core"
-brew "difftastic"
 brew "btop"
 brew "bufbuild/buf/buf"
 brew "chafa"
@@ -27,6 +28,7 @@ brew "container" if OS.mac?
 brew "coursier/formulas/coursier", postinstall: %q[printf '#compdef cs\n\n_cs() {\n  eval "$(cs complete zsh-v1 $CURRENT $words[@])"\n}\n' >~/.config/zsh/completions/_cs]
 brew "cowsay"
 brew "databricks/tap/databricks"
+brew "difftastic"
 brew "direnv" if OS.mac?
 brew "docker-compose"
 brew "duckdb"
@@ -47,7 +49,6 @@ brew "gnupg"
 brew "golang"
 brew "graphviz"
 brew "hadolint"
-brew "hunk"
 brew "hyperfine"
 brew "imagemagick"
 brew "jless"
@@ -127,6 +128,7 @@ cask "kitty"
 cask "maccy"
 cask "monitorcontrol"
 cask "podman-desktop", postinstall: "podman completion zsh >~/.config/zsh/completions/_podman"
+cask "pycharm"
 cask "rectangle"
 cask "opensuperwhisper"
 cask "utm" # Troubleshooting: Use "Emulated VLAN" instead of "Shared Network" - see https://github.com/utmapp/UTM/issues/3802#issuecomment-1518924607
