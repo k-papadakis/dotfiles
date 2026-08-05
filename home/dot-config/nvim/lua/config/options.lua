@@ -9,7 +9,7 @@ vim.g.ai_cmp = false
 vim.g.snacks_animate = false
 
 vim.opt.title = true
-vim.opt.titlestring = "%{fnamemodify('.', ':~:t')} - Nvim"
+vim.opt.titlestring = "NV | %{fnamemodify('.', ':~:t')}"
 
 vim.opt.colorcolumn = "80"
 
