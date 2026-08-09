@@ -1,0 +1,64 @@
+# vim: filetype=bash
+function vd() {
+  local -a command_args
+  local mode
+
+  if (($# > 0)); then
+    command_args=(DiffviewOpen "$@")
+  else
+    if ! git rev-parse --show-toplevel &>/dev/null; then
+      print -u2 'vd: not inside a Git repository'
+      return 1
+    fi
+
+    mode=$(
+      printf '%s\n' \
+        'Working tree' \
+        'Staged changes' \
+        'Compare branch' \
+        'Show commit' \
+        'File history' |
+        fzf --height=~50% --layout=reverse --border --prompt='Diffview> '
+    )
+    [[ -z $mode ]] && return 0
+
+    case $mode in
+    'Working tree')
+      command_args=(DiffviewOpen)
+      ;;
+    'Staged changes')
+      command_args=(DiffviewOpen --cached)
+      ;;
+    'Compare branch')
+      local branch
+      branch=$(
+        git for-each-ref --format='%(refname:short)' refs/heads refs/remotes |
+          fzf --height=~50% --layout=reverse --border --prompt='Branch> '
+      )
+      [[ -z $branch ]] && return 0
+      command_args=(DiffviewOpen "$branch")
+      ;;
+    'Show commit')
+      local commit
+      commit=$(
+        git log --all --exclude=refs/stash --no-color --date=short --format='%h  %ad  %s' |
+          fzf --height=~50% --layout=reverse --border --prompt='Commit changes> '
+      )
+      [[ -z $commit ]] && return 0
+      command_args=(DiffviewOpen "${commit%% *}^!")
+      ;;
+    'File history')
+      local file
+      file=$(
+        git ls-files |
+          fzf --height=~50% --layout=reverse --border --prompt='File history> '
+      )
+      [[ -z $file ]] && return 0
+      command_args=(DiffviewFileHistory -- "$file")
+      ;;
+    esac
+  fi
+
+  local command="${(j: :)command_args}"
+  nvim -c "$command"
+}
