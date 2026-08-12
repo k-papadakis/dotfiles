@@ -141,4 +141,3 @@ uv "dagster-dg-cli", with: ["typer<0.26"] # HACK: `--help` not showing options h
 uv "markitdown[all]"
 uv "pyhocon"
 uv "terminaltexteffects"
-uv "unimatrix"
