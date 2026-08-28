@@ -1,0 +1,51 @@
+# Kanagawa Wave palette from rebelot/kanagawa.nvim.
+panel_bg = "#1F1F28"
+bg_highlight = "#2D4F67"
+fg_primary = "#DCD7BA"
+fg_secondary = "#C8C093"
+fg_dim = "#727169"
+
+diff_add = "#76946A"
+diff_add_bg = "#2B3328"
+diff_del = "#C34043"
+diff_del_bg = "#43242B"
+diff_context = "#DCD7BA"
+diff_hunk_header = "#7E9CD8"
+expanded_context_fg = "#727169"
+
+syntax_add_bg = "#2B3328"
+syntax_del_bg = "#43242B"
+syntax_theme = "../../bat/themes/kanagawa.tmTheme"
+
+file_added = "#76946A"
+file_modified = "#DCA561"
+file_deleted = "#C34043"
+file_renamed = "#957FB8"
+
+reviewed = "#76946A"
+pending = "#DCA561"
+
+comment_note = "#7E9CD8"
+comment_suggestion = "#7AA89F"
+comment_issue = "#E82424"
+comment_praise = "#98BB6C"
+
+border_focused = "#7E9CD8"
+border_unfocused = "#54546D"
+status_bar_bg = "#1A1A22"
+cursor_color = "#C8C093"
+cursor_line_bg = "#2D4F67"
+branch_name = "#7AA89F"
+help_indicator = "#727169"
+
+message_info_fg = "#16161D"
+message_info_bg = "#7E9CD8"
+message_warning_fg = "#16161D"
+message_warning_bg = "#DCA561"
+message_error_fg = "#16161D"
+message_error_bg = "#E82424"
+update_badge_fg = "#16161D"
+update_badge_bg = "#FFA066"
+
+mode_fg = "#16161D"
+mode_bg = "#957FB8"
