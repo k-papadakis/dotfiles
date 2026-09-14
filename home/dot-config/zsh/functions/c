@@ -1,7 +1,7 @@
 # vim: filetype=zsh
 c() {
   local model
-  model=$(printf '%s\n' opus sonnet haiku fable | fzf --prompt='model> ' --height=~50%) || return
+  model=$(printf '%s\n' fable opus sonnet haiku | fzf --prompt='model> ' --height=~50%) || return
 
   local mode
   case "$model" in
