@@ -1,5 +1,5 @@
 alias batman='bat --language=man --style=plain --paging=always'
-alias bb='brew bundle install --global'
+alias bb='brew bundle install --global && brew bundle cleanup --global --force'
 alias dab='databricks bundle'
 alias ghmp='gh markdown-preview --markdown-mode'
 alias icat='kitten icat'
