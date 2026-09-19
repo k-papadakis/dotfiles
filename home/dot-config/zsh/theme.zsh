@@ -1,35 +1,39 @@
 export DOTFILES_THEME="kanagawa"
 
+_set_opencode_theme() {
+  export OPENCODE_CLI_CONFIG_CONTENT="{\"theme\":{\"name\":\"$1\"}}"
+}
+
 case "${DOTFILES_THEME:-}" in
 kanagawa)
   export NVIM_COLORSCHEME="kanagawa-wave"
   export BAT_THEME="kanagawa"
-  export OPENCODE_THEME="kanagawa"
+  _set_opencode_theme "kanagawa"
   source "${ZDOTDIR}/themes/fzf/kanagawa/kanagawa-wave.sh"
   ;;
 tokyonight)
   export NVIM_COLORSCHEME="tokyonight-night"
   export BAT_THEME="tokyonight_night"
-  export OPENCODE_THEME="tokyonight"
+  _set_opencode_theme "tokyonight"
   source "${ZDOTDIR}/themes/fzf/tokyonight/tokyonight_night.sh"
   ;;
 catppuccin)
   export NVIM_COLORSCHEME="catppuccin-macchiato"
   export BAT_THEME="Catppuccin Macchiato"
-  export OPENCODE_THEME="catppuccin-macchiato"
+  _set_opencode_theme "catppuccin-macchiato"
   source "${ZDOTDIR}/themes/fzf/catppuccin/catppuccin-macchiato.sh"
   source "${ZDOTDIR}/themes/zsh-syntax-highlighting/catppuccin/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh"
   ;;
 gruvbox-material)
   export NVIM_COLORSCHEME="gruvbox-material"
   export BAT_THEME="gruvbox-material-dark"
-  export OPENCODE_THEME="gruvbox"
+  _set_opencode_theme "gruvbox"
   source "${ZDOTDIR}/themes/fzf/gruvbox-material/gruvbox-material-dark-medium.sh"
   ;;
 vscode)
   export NVIM_COLORSCHEME="vscode"
   export BAT_THEME="Visual Studio Dark+"
-  export OPENCODE_THEME="cursor"
+  _set_opencode_theme "cursor"
   source "${ZDOTDIR}/themes/fzf/vscode/vscode-dark.sh"
   ;;
 "") ;;
@@ -37,3 +41,5 @@ vscode)
   echo "Unknown DOTFILES_THEME: '${DOTFILES_THEME}'" >&2
   ;;
 esac
+
+unfunction _set_opencode_theme
