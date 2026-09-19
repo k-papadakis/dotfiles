@@ -115,7 +115,7 @@ brew "gnu-tar" if OS.mac?
 brew "grep" if OS.mac?
 
 cask "basictex"
-cask "claude-code"
+cask "claude-code@latest"
 cask "crystalfetch"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
