@@ -3,6 +3,8 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 
 export MANPAGER='nvim +Man!'
 
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
+
 # Default Editor
 if [[ -n ${SSH_CONNECTION} ]]; then
   export VISUAL=vim
