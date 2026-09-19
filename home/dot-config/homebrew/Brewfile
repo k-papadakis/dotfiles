@@ -2,7 +2,7 @@
 
 # Taps should be at the top of the Brewfile.
 
-tap "anomalyco/tap", trusted: {formula: "opencode"}
+tap "anomalyco/tap", trusted: {formulae: ["opencode"], casks: ["hex"]}
 tap "atlassian/homebrew-acli", trusted: {formula: "acli"}
 tap "bufbuild/buf", trusted: {formula: "buf"}
 tap "coursier/formulas", trusted: {formula: "coursier"}
@@ -114,6 +114,7 @@ brew "gnu-sed" if OS.mac?
 brew "gnu-tar" if OS.mac?
 brew "grep" if OS.mac?
 
+cask "anomalyco/tap/hex"
 cask "basictex"
 cask "claude-code@latest"
 cask "crystalfetch"
@@ -124,7 +125,6 @@ cask "gpg-suite-no-mail"
 cask "intellij-idea"
 cask "karabiner-elements"
 cask "kitty"
-cask "kitlangton-hex"
 cask "maccy"
 cask "monitorcontrol"
 cask "podman-desktop", postinstall: "podman completion zsh >~/.config/zsh/completions/_podman"
