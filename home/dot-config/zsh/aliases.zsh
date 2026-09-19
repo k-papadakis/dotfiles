@@ -13,6 +13,7 @@ alias ur='uv run'
 alias v='nvim'
 alias view='nvim -R'
 alias yless="jless --yaml"
+alias restow='stow --verbose --restow --dotfiles --target="$HOME" --dir "$HOME/projects/personal/dotfiles" home'
 
 alias l='eza --color=auto --icons=auto'
 alias la='eza --long --all --color=auto --icons=auto --git'
