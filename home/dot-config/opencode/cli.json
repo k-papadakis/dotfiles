@@ -6,6 +6,9 @@
   "session": {
     "thinking": "show"
   },
+  "tabs": {
+    "indicators": "numbers"
+  },
   "keybinds": {
     "command.palette.show": "<leader>p",
     "input.submit": "return,ctrl+m",
