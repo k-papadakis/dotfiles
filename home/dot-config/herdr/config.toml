@@ -1,0 +1,25 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+a"
+switch_workspace = "cmd+1..9"
+focus_agent = "ctrl+1..9"
+last_pane = ["prefix+a", "cmd+a"]
+focus_pane_left = ["prefix+h", "cmd+h"]
+focus_pane_down = ["prefix+j", "cmd+j"]
+focus_pane_up = ["prefix+k", "cmd+k"]
+focus_pane_right = ["prefix+l", "cmd+l"]
+
+[theme]
+name = "kanagawa"
+auto_switch = false
+
+[ui]
+right_click_passthrough_modifier = "cmd"
+status_indicators = "symbols"
+
+[ui.toast]
+delivery = "herdr"
+
+[ui.sound]
+enabled = true

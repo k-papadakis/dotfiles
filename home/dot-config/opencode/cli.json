@@ -17,8 +17,5 @@
     "prompt.history.previous": "up,ctrl+p",
     "prompt.history.next": "down,ctrl+n"
   },
-  "attention": {
-    "notifications": true,
-    "sound": true
-  }
+  "plugins": ["./herdr-opencode"]
 }
