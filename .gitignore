@@ -18,3 +18,4 @@ home/dot-config/hunk/*
 *.bak
 home/dot-config/herdr/*
 !home/dot-config/herdr/config.toml
+!home/dot-config/herdr/plugins/

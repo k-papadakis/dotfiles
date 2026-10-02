@@ -1,0 +1,32 @@
+id = "local.close-guard"
+name = "Close Guard"
+version = "0.2.0"
+min_herdr_version = "0.9.3"
+description = "Close idle shells immediately and confirm before closing panes, tabs or workspaces with running processes"
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "close-pane"
+title = "Close pane (confirm unless idle shell)"
+contexts = ["pane"]
+command = ["bash", "close.sh", "pane"]
+
+[[actions]]
+id = "close-tab"
+title = "Close tab (confirm unless idle shells)"
+contexts = ["tab"]
+command = ["bash", "close.sh", "tab"]
+
+[[actions]]
+id = "close-workspace"
+title = "Close workspace (confirm unless idle shells)"
+contexts = ["workspace"]
+command = ["bash", "close.sh", "workspace"]
+
+[[panes]]
+id = "confirm-close"
+title = "Close Guard"
+placement = "popup"
+width = 64
+height = 10
+command = ["bash", "confirm-close.sh"]
