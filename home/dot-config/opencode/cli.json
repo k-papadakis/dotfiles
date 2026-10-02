@@ -5,7 +5,7 @@
     "image_preview": true
   },
   "session": {
-    "thinking": "show"
+    "thinking": "hide"
   },
   "tabs": {
     "indicators": "numbers"
