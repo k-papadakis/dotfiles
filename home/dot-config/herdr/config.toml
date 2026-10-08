@@ -2,6 +2,7 @@ onboarding = false
 
 [keys]
 prefix = "ctrl+a"
+split_vertical = ["prefix+v", "prefix+|"]
 switch_workspace = "cmd+1..9"
 focus_agent = "ctrl+1..9"
 last_pane = ["prefix+a", "cmd+a"]
