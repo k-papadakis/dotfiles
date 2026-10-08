@@ -1,10 +1,14 @@
 {
   "$schema": "https://opencode.ai/v2/cli.json",
   "prompt": {
-    "paste": "full"
+    "paste": "full",
+    "image_preview": true
   },
   "session": {
-    "thinking": "show"
+    "thinking": "hide"
+  },
+  "tabs": {
+    "indicators": "numbers"
   },
   "keybinds": {
     "command.palette.show": "<leader>p",
@@ -13,8 +17,5 @@
     "prompt.history.previous": "up,ctrl+p",
     "prompt.history.next": "down,ctrl+n"
   },
-  "attention": {
-    "notifications": true,
-    "sound": true
-  }
+  "plugins": ["./herdr-opencode"]
 }

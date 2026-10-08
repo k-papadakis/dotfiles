@@ -16,3 +16,6 @@ home/dot-config/opencode/*
 home/dot-config/hunk/*
 !home/dot-config/hunk/config.toml
 *.bak
+home/dot-config/herdr/*
+!home/dot-config/herdr/config.toml
+!home/dot-config/herdr/plugins/

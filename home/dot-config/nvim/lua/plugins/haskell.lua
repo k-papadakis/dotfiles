@@ -86,11 +86,12 @@ return {
         haskell = { "hlint" },
       },
     },
-    dependencies = {
-      {
-        "mason-org/mason.nvim",
-        opts = { ensure_installed = { "hlint" } },
-      },
-    },
+    -- no hlint binaries found for aarch64-darwin - use `cabal install hlint`
+    -- dependencies = {
+    --   {
+    --     "mason-org/mason.nvim",
+    --     opts = { ensure_installed = { "hlint" } },
+    --   },
+    -- },
   },
 }
