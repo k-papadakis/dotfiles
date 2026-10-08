@@ -28,6 +28,30 @@ type = "plugin_action"
 command = "local.close-guard.close-workspace"
 description = "Close workspace (confirm unless idle shells)"
 
+[[keys.command]]
+key = "prefix+`"
+type = "popup"
+description = "Join pane into another tab"
+command = '''
+tab=$(
+  jq -rn --argjson ws "$(herdr workspace list)" --argjson tabs "$(herdr tab list)" '
+    ($ws.result.workspaces | map({(.workspace_id): .label}) | add) as $names
+    | $tabs.result.tabs[]
+    | select(.tab_id != env.HERDR_ACTIVE_TAB_ID)
+    | "\(.tab_id)\t\($names[.workspace_id]) / \(.label)"' |
+    fzf --with-nth=2.. --delimiter='\t' --prompt='join> ' | cut -f1
+) && herdr pane move "$HERDR_ACTIVE_PANE_ID" --tab "$tab" --split right --focus
+'''
+
+[[keys.command]]
+key = "prefix+!"
+type = "popup"
+description = "Break pane into a new tab"
+command = '''
+printf 'tab name> ' && read -r name &&
+  herdr pane move "$HERDR_ACTIVE_PANE_ID" --new-tab ${name:+--label "$name"} --focus
+'''
+
 [theme]
 name = "kanagawa"
 auto_switch = false
