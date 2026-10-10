@@ -1,0 +1,15 @@
+# Setup:
+#   1. systemctl --user enable --now ssh-agent.socket
+#   2. export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+#      (skip when forwarding: only set when -z "$SSH_CONNECTION")
+#   3. First `ssh user@host` (or `ssh-add ~/.ssh/id_ed25519`) prompts once,
+#      then agent serves the key. Verify with `ssh-add -l`.
+#
+# Docs: https://wiki.archlinux.org/title/SSH_keys#ssh-agent
+# GitHub: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux
+Host *
+  # Auto-add decrypted keys to ssh-agent on first use (avoids manual ssh-add).
+  AddKeysToAgent yes
+  # Default key to offer. Explicit so per-Host selection/ordering is clear;
+  # combine with IdentitiesOnly yes when using multiple keys.
+  IdentityFile ~/.ssh/id_ed25519

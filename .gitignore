@@ -19,3 +19,5 @@ home/dot-config/hunk/*
 home/dot-config/herdr/*
 !home/dot-config/herdr/config.toml
 !home/dot-config/herdr/plugins/
+home/dot-ssh/*
+!home/dot-ssh/config
