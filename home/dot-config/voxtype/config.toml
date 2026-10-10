@@ -92,8 +92,8 @@ language = "en"
 translate = false
 mode = "local"
 flash_attention = false
-on_demand_loading = false
-gpu_isolation = false
+on_demand_loading = true
+gpu_isolation = true
 
 # Number of CPU threads for inference (omit for auto-detection)
 # threads = 4
