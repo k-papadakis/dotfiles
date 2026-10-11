@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Load SSH key into agent
+Comment=Unlock SSH key at login via KWallet so all sessions reuse it
+Exec=/usr/bin/sh -c "ssh-add ~/.ssh/id_ed25519"
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

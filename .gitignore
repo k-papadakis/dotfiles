@@ -19,3 +19,10 @@ home/dot-config/hunk/*
 home/dot-config/herdr/*
 !home/dot-config/herdr/config.toml
 !home/dot-config/herdr/plugins/
+home/dot-config/environment.d/*
+!home/dot-config/environment.d/ssh_agent.conf
+!home/dot-config/environment.d/ssh_askpass.conf
+home/dot-config/autostart/*
+!home/dot-config/autostart/ssh-add.desktop
+home/dot-ssh/*
+!home/dot-ssh/config

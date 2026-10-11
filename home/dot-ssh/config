@@ -1,0 +1,22 @@
+# Agent socket comes from environment.d/ssh_agent.conf (relogin to apply);
+# sshd sessions fall back to the default in dot-zshenv. Check `ssh-add -l`.
+#
+# Docs: https://wiki.archlinux.org/title/SSH_keys#ssh-agent
+# GitHub: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux
+# Specific hosts first — first-obtained value wins, so per-Host blocks
+# precede `Host *`.
+# Private/machine-specific hosts go in `~/.ssh/config.d/` (e.g. work).
+Include config.d/*
+Host github.com
+  # GitHub only accepts the `git` service user.
+  User git
+  # Pin to this key and offer nothing else. Ignores other agent keys (e.g. Herdr),
+  # avoiding wrong-identity auth or `too many authentication failures`.
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+  # GitHub is pubkey-only; fail fast instead of prompting for a password.
+  PreferredAuthentications publickey
+
+Host *
+  # Cache decrypted key in the agent on first use; type passphrase once.
+  AddKeysToAgent yes

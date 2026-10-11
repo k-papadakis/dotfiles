@@ -1,3 +1,9 @@
 # vim: filetype=zsh
 
 export ZDOTDIR="${HOME}/.config/zsh"
+
+# sshd sessions (e.g. phone SSH over the tailnet) can arrive without the
+# user-manager environment, leaving SSH_AUTH_SOCK unset; default it without
+# overriding forwards.
+[[ -z "${SSH_AUTH_SOCK:-}" && -S "${XDG_RUNTIME_DIR:-/run/user/$UID}/ssh-agent.socket" ]] \
+  && export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR:-/run/user/$UID}/ssh-agent.socket"
