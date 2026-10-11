@@ -4,11 +4,7 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 export MANPAGER='nvim +Man!'
 
 # Default Editor
-if [[ -n ${SSH_CONNECTION} ]]; then
-  export VISUAL=vim
-else
-  export VISUAL=nvim
-fi
+export VISUAL=nvim
 export EDITOR="${VISUAL}"
 
 eval "$(starship init zsh)"
