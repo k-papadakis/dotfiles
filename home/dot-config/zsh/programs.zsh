@@ -6,11 +6,7 @@ export MANPAGER='nvim +Man!'
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
 
 # Default Editor
-if [[ -n ${SSH_CONNECTION} ]]; then
-  export VISUAL=vim
-else
-  export VISUAL=nvim
-fi
+export VISUAL=nvim
 export EDITOR="${VISUAL}"
 
 eval "$(starship init zsh)"
