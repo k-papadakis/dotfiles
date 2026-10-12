@@ -61,6 +61,7 @@ auto_switch = false
 right_click_passthrough_modifier = "cmd"
 status_indicators = "symbols"
 prompt_new_workspace_name = true
+prompt_new_tab_name = false
 
 [ui.toast]
 delivery = "herdr"
