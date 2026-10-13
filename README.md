@@ -29,13 +29,14 @@ stow --verbose --restow --target="$HOME" \
 
 ### PAM
 
-Enable touch id authentication for `sudo`, including from within TMUX, by
-running
+To enable Touch ID authentication for `sudo`, run this and uncomment the
+`pam_tid.so` line in the editor:
 
 ```bash
-sudo echo \
-"auth       optional       $(brew --prefix)/lib/pam/pam_reattach.so       ignore_ssh
-auth       sufficient     pam_tid.so" > /etc/pam.d/sudo_local
+if [[ ! -e /etc/pam.d/sudo_local ]]; then
+  sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
+fi
+sudo -e /etc/pam.d/sudo_local
 ```
 
 ### Karabiner
