@@ -1,5 +1,21 @@
 onboarding = false
 
+[theme]
+name = "kanagawa"
+auto_switch = false
+
+[ui]
+right_click_passthrough_modifier = "cmd"
+status_indicators = "symbols"
+prompt_new_workspace_name = true
+prompt_new_tab_name = false
+
+[ui.toast]
+delivery = "herdr"
+
+[ui.sound]
+enabled = true
+
 [keys]
 prefix = "ctrl+a"
 split_vertical = ["prefix+v", "prefix+|"]
@@ -52,18 +68,3 @@ command = '''
 printf 'tab name> ' && read -r name &&
   herdr pane move "$HERDR_ACTIVE_PANE_ID" --new-tab ${name:+--label "$name"} --focus
 '''
-
-[theme]
-name = "kanagawa"
-auto_switch = false
-
-[ui]
-right_click_passthrough_modifier = "cmd"
-status_indicators = "symbols"
-prompt_new_workspace_name = true
-
-[ui.toast]
-delivery = "herdr"
-
-[ui.sound]
-enabled = true
