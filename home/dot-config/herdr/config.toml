@@ -28,6 +28,14 @@ focus_pane_up = ["prefix+k", "cmd+k"]
 focus_pane_right = ["prefix+l", "cmd+l"]
 
 [[keys.command]]
+key = "prefix+ctrl+g"
+type = "popup"
+command = "lazygit"
+description = "run lazygit"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
 key = "prefix+x"
 type = "plugin_action"
 command = "local.close-guard.close-pane"
