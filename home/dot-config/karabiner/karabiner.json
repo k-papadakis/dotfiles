@@ -195,7 +195,7 @@
             ]
           },
           {
-            "description": "opt+2 → Kitty",
+            "description": "opt+2 → Chrome",
             "manipulators": [
               {
                 "from": {
@@ -209,7 +209,7 @@
                   {
                     "software_function": {
                       "open_application": {
-                        "file_path": "/Applications/kitty.app"
+                        "file_path": "/Applications/Google Chrome.app"
                       }
                     }
                   }
@@ -219,7 +219,7 @@
             ]
           },
           {
-            "description": "opt+3 → Chrome",
+            "description": "opt+3 → Kitty",
             "manipulators": [
               {
                 "from": {
@@ -233,7 +233,7 @@
                   {
                     "software_function": {
                       "open_application": {
-                        "file_path": "/Applications/Google Chrome.app"
+                        "file_path": "/Applications/kitty.app"
                       }
                     }
                   }
