@@ -68,6 +68,7 @@ keymap:
       C-r: Super-r
       M-f: C-right
       M-b: C-left
+      M-d: C-Delete
       # map the originals to super
       # Super-p: C-p  # display layout picker
       Super-n: C-n
