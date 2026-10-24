@@ -55,16 +55,29 @@ description = "Close workspace (confirm unless idle shells)"
 [[keys.command]]
 key = "prefix+`"
 type = "popup"
-description = "Join pane into another tab"
+description = "Join pane into another tab or workspace"
 command = '''
-tab=$(
+dest=$(
   jq -rn --argjson ws "$(herdr workspace list)" --argjson tabs "$(herdr tab list)" '
     ($ws.result.workspaces | map({(.workspace_id): .label}) | add) as $names
-    | $tabs.result.tabs[]
-    | select(.tab_id != env.HERDR_ACTIVE_TAB_ID)
-    | "\(.tab_id)\t\($names[.workspace_id]) / \(.label)"' |
-    fzf --with-nth=2.. --delimiter='\t' --prompt='join> ' | cut -f1
-) && herdr pane move "$HERDR_ACTIVE_PANE_ID" --tab "$tab" --split right --focus
+    | (
+        $tabs.result.tabs[]
+        | select(.tab_id != env.HERDR_ACTIVE_TAB_ID)
+        | "tab\t\(.tab_id)\t\($names[.workspace_id]) / \(.label)"
+      ),
+      (
+        $ws.result.workspaces[]
+        | "workspace\t\(.workspace_id)\t\(.label) / + new tab"
+      )' |
+    fzf --with-nth=3.. --delimiter='\t' --prompt='join> ' | head -n1 | cut -f1,2
+)
+[ -n "$dest" ] || exit 0
+kind=$(printf '%s' "$dest" | cut -f1)
+id=$(printf '%s' "$dest" | cut -f2)
+case $kind in
+  tab) herdr pane move "$HERDR_ACTIVE_PANE_ID" --tab "$id" --split right --focus ;;
+  workspace) herdr pane move "$HERDR_ACTIVE_PANE_ID" --new-tab --workspace "$id" --focus ;;
+esac
 '''
 
 [[keys.command]]
