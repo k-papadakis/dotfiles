@@ -84,6 +84,7 @@ keymap:
       Super-a: C-a
       Super-s: C-s
       Super-t: C-t
+      Super-Shift-t: C-Shift-t
       Super-z: C-z
       Super-equal: C-equal
       Super-minus: C-minus
