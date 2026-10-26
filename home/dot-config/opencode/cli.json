@@ -16,7 +16,9 @@
     "input.submit": "return,ctrl+m",
     "input.backspace": "backspace,shift+backspace,ctrl+h",
     "prompt.history.previous": "up,ctrl+p",
-    "prompt.history.next": "down,ctrl+n"
+    "prompt.history.next": "down,ctrl+n",
+    "prompt.stash": "ctrl+s",
+    "prompt.stash.pop": "ctrl+s"
   },
   "plugins": ["./herdr-opencode"]
 }
