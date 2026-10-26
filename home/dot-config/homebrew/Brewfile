@@ -46,7 +46,7 @@ brew "glab", postinstall: "rm -rf ~/.local/share/skills/generated/glab && mkdir 
 brew "golang"
 brew "graphviz"
 brew "hadolint"
-brew "herdr"
+brew "herdr", postinstall: "mkdir -p ~/.local/share/skills/generated/herdr && ${HOMEBREW_PREFIX}/bin/herdr --skill >~/.local/share/skills/generated/herdr/SKILL.md"
 brew "hyperfine"
 brew "imagemagick"
 brew "jless"
