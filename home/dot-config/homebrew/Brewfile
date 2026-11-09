@@ -11,7 +11,6 @@ tap "databricks/tap", trusted: {formula: "databricks"}
 brew "anomalyco/tap/opencode-v2", postinstall: "${HOMEBREW_PREFIX}/bin/opencode --completions zsh >~/.config/zsh/completions/_opencode"
 brew "ast-grep"
 brew "atlassian/homebrew-acli/acli", postinstall: "${HOMEBREW_PREFIX}/bin/acli completion zsh >~/.config/zsh/completions/_acli"
-brew "azure-cli"
 brew "basedpyright"
 brew "bash"
 brew "bashdb"
@@ -114,6 +113,7 @@ brew "gnu-tar" if OS.mac?
 brew "grep" if OS.mac?
 
 cask "anomalyco/tap/hex"
+cask "azure-cli"
 cask "basictex"
 cask "claude-code@latest"
 cask "crystalfetch"
