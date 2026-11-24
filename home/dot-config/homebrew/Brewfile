@@ -188,7 +188,7 @@ patch_bundle.call(:Uv, %i[package_outdated? package_manager_executable! tool_pyt
 end
 
 uv "atl-cli"
-uv "dagster-dg-cli", with: ["typer<0.26"] # HACK: `--help` not showing options https://github.com/dagster-io/dagster/issues/33893
+uv "dagster-dg-cli"
 uv "markitdown[all]"
 uv "pyhocon"
 uv "terminaltexteffects"
