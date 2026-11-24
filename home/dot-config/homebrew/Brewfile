@@ -140,7 +140,32 @@ patch_bundle = lambda do |class_name, methods, &patch|
   klass.prepend(Module.new(&patch))
 end
 
-# npm "..."
+# Install npm packages like plain `npm install -g` (upstream adds
+# `--ignore-scripts`, a release cooldown and its own cache), letting only the
+# packages listed here run install scripts, and leave `npm link`ed packages alone
+patch_bundle.call(:Npm, %i[install_package! install_batch! listed_package_names
+                           package_manager_executable! inventory_json]) do
+  def install_package!(name, with: nil, verbose: false)
+    Bundle.system(package_manager_executable!.to_s, "install", *npm_install_args([name]), "-g", name, verbose:)
+  end
+
+  def install_batch!(entries, verbose: false)
+    names = entries.map(&:name)
+    Bundle.system(package_manager_executable!.to_s, "install", *npm_install_args(names), "-g", *names, verbose:)
+  end
+
+  def npm_install_args(names)
+    ["--allow-scripts=#{names.join(",")}"]
+  end
+
+  def listed_package_names(npm)
+    _, json = inventory_json(npm, "list")
+    linked = json.fetch("dependencies", {}).filter_map do |name, metadata|
+      name if metadata.is_a?(Hash) && metadata["resolved"].to_s.start_with?("file:")
+    end
+    super - linked
+  end
+end
 
 # Only treat uv tools as outdated when the tool itself has a new version,
 # not when only its dependencies do (upstream dry-runs with `--upgrade`)
