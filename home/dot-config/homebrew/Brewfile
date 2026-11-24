@@ -124,7 +124,42 @@ cask "rectangle"
 
 # cargo "..."
 
+# Patches Homebrew::Bundle internals, failing loudly (rather than silently
+# reverting to upstream behaviour) if any method the patch relies on is gone
+patch_bundle = lambda do |class_name, methods, &patch|
+  unless Homebrew::Bundle.const_defined?(class_name, false)
+    raise "Brewfile hack is stale: Homebrew::Bundle::#{class_name} no longer exists"
+  end
+
+  klass = Homebrew::Bundle.const_get(class_name, false).singleton_class
+  missing = methods.reject { |method| klass.method_defined?(method) || klass.private_method_defined?(method) }
+  if missing.any?
+    raise "Brewfile hack is stale: Homebrew::Bundle::#{class_name} no longer has #{missing.join(", ")}"
+  end
+
+  klass.prepend(Module.new(&patch))
+end
+
 # npm "..."
+
+# Only treat uv tools as outdated when the tool itself has a new version,
+# not when only its dependencies do (upstream dry-runs with `--upgrade`)
+patch_bundle.call(:Uv, %i[package_outdated? package_manager_executable! tool_python
+                          upgrade_requirement normalize_with]) do
+  def package_outdated?(name, with: nil, source: nil)
+    output = SystemCommand.run!(
+      package_manager_executable!,
+      args:         ["pip", "install", "--dry-run", "--upgrade-package", name.split("[", 2).first,
+                     "--python", tool_python(name),
+                     upgrade_requirement(name, source:), *normalize_with(with || [])],
+      print_stderr: false,
+    ).stderr
+    return true if output.match?(/^Would (?:install|uninstall) \d+ packages?$/)
+    return false if output.lines.any? { |line| line.chomp == "Would make no changes" }
+
+    raise "Invalid uv upgrade plan for #{name}: #{output.inspect}"
+  end
+end
 
 uv "atl-cli"
 uv "dagster-dg-cli", with: ["typer<0.26"] # HACK: `--help` not showing options https://github.com/dagster-io/dagster/issues/33893
