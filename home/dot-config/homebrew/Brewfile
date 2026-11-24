@@ -7,7 +7,6 @@ tap "bufbuild/buf", trusted: {formula: "buf"}
 tap "coursier/formulas", trusted: {formula: "coursier"}
 tap "databricks/tap", trusted: {formula: "databricks"}
 
-brew "anomalyco/tap/opencode-v2", postinstall: "${HOMEBREW_PREFIX}/bin/opencode --completions zsh >~/.config/zsh/completions/_opencode"
 brew "ast-grep"
 brew "basedpyright"
 brew "bash"
@@ -108,7 +107,6 @@ brew "grep" if OS.mac?
 cask "anomalyco/tap/hex"
 cask "azure-cli"
 cask "basictex"
-cask "claude-code@latest"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
@@ -166,6 +164,9 @@ patch_bundle.call(:Npm, %i[install_package! install_batch! listed_package_names
     super - linked
   end
 end
+
+npm "@anthropic-ai/claude-code"
+npm "@opencode/cli"
 
 # Only treat uv tools as outdated when the tool itself has a new version,
 # not when only its dependencies do (upstream dry-runs with `--upgrade`)
