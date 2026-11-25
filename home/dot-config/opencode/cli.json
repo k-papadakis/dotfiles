@@ -19,7 +19,9 @@
     "prompt.history.previous": "up,ctrl+p",
     "prompt.history.next": "down,ctrl+n",
     "prompt.stash": "ctrl+s",
-    "prompt.stash.pop": "ctrl+s"
+    "prompt.stash.pop": "ctrl+s",
+    "variant.cycle": "none",
+    "variant.list": "<leader>v"
   },
   "plugins": ["./herdr-opencode"]
 }
